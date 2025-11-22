@@ -1,0 +1,15 @@
+; Coefficient file for Xilinx Block RAM
+; Generated from quantized neural network weights
+
+memory_initialization_radix=16;
+memory_initialization_vector=
+FFC6,
+FFDB,
+0002,
+FFEC,
+FFEE,
+0009,
+FFFB,
+FFE2,
+0033,
+0033;

@@ -1,0 +1,41 @@
+======================================================================
+FPGA Memory Map for Neural Network Inference
+======================================================================
+
+ARCHITECTURE:
+  784 -> 128 -> 10
+
+QUANTIZATION:
+  Layer 0 scale: 256.0
+  Layer 1 scale: 256.0
+
+MEMORY REQUIREMENTS:
+
+  Layer 0:
+    Weights: 100,352 x 16-bit = 200,704 bytes
+    Biases:  128 x 16-bit = 256 bytes
+    Subtotal: 200,960 bytes (196.25 KB)
+
+  Layer 1:
+    Weights: 1,280 x 16-bit = 2,560 bytes
+    Biases:  10 x 16-bit = 20 bytes
+    Subtotal: 2,580 bytes (2.52 KB)
+
+  TOTAL PARAMETERS: 101,770
+  TOTAL MEMORY: 203,540 bytes (198.77 KB)
+
+HARDWARE IMPLEMENTATION:
+  Scale is 256 (power of 2) - HARDWARE FRIENDLY!
+  Use >> 8 to divide by scale in hardware
+  All values fit in 32-bit accumulators
+
+FILE FORMATS:
+  .hex - Use with $readmemh() in Verilog/SystemVerilog
+  .coe - Use with Xilinx Block Memory Generator IP
+  .mem - Alternative format with addresses
+
+TEST IMAGES:
+  10 test images provided (test_image_0.hex to test_image_9.hex)
+  Each image: 784 values x 16-bit
+  Format: [0-256] matching quantization scale
+

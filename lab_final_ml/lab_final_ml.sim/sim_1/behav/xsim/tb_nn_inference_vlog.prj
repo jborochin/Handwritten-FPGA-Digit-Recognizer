@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../lab_final_ml.srcs/sources_1/imports/rtl/nn_inference_simple.sv" \
+"../../../../lab_final_ml.srcs/sim_1/imports/sim/tb_nn_inference.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

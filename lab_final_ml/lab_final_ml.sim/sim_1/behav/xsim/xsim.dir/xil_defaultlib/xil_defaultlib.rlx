@@ -1,0 +1,9 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/sim_1/imports/sim/tb_nn_inference.sv,1763781090,systemVerilog,,,,tb_nn_inference,,uvm,,,,,,
+C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/sources_1/imports/rtl/mac_unit.sv,1763578075,systemVerilog,,C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/sources_1/imports/rtl/matrix_vector_mult.sv,,mac_unit,,uvm,,,,,,
+C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/sources_1/imports/rtl/matrix_vector_mult.sv,1763578080,systemVerilog,,C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/sources_1/imports/rtl/nn_inference_top.sv,,matrix_vector_mult,,uvm,,,,,,
+C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/sources_1/imports/rtl/nn_inference_simple.sv,1763779280,systemVerilog,,C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/sim_1/imports/sim/tb_nn_inference.sv,,nn_inference_simple,,uvm,,,,,,

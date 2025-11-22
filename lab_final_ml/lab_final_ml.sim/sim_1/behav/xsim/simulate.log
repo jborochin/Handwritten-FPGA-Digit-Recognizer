@@ -1,0 +1,148 @@
+Time resolution is 1 ps
+========================================
+Neural Network Inference Testbench
+Testing All 10 MNIST Images
+========================================
+
+========================================
+DIAGNOSTIC MODE - Testing Image 0 (Expected: 7)
+========================================
+
+[1] Clearing test_image array...
+
+[2] Attempting to load: test_image_0_label_7.hex
+    SUCCESS: File exists and is readable
+
+[3] Loading hex file with $readmemh...
+
+[4] Analyzing loaded data:
+    Total non-zero pixels: 116 / 784
+
+[5] Sample pixel values from different regions:
+    Pixels [0-9]:       0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+    Pixels [200-209]:   0000 0000 0054 00b9 009f 0097 003c 0024 0000 0000
+
+[6] Location of first 10 non-zero pixels:
+    Index 202: 0054
+    Index 203: 00b9
+    Index 204: 009f
+    Index 205: 0097
+    Index 206: 003c
+    Index 207: 0024
+    Index 230: 00de
+    Index 231: 00fe
+    Index 232: 00fe
+    Index 233: 00fe
+
+[7] Loading data into DUT via load_input interface...
+    Loading complete
+
+[8] Verifying data in DUT.input_mem:
+    DUT has 116 non-zero pixels
+
+[9] Cross-checking test_image vs DUT.input_mem:
+    SUCCESS: All 784 pixels match!
+
+[10] Starting inference...
+
+[11] Inference Results:
+    Expected:   7
+    Prediction: 7
+    Result: *** CORRECT! ***
+    Confidence: 592872
+    Latency: 1.033 ms (103329 clock cycles)
+
+[12] Output layer values:
+    Digit 0:    -471558              
+    Digit 1:    -416100              
+    Digit 2:      27253              
+    Digit 3:      42526              
+    Digit 4:    -888745              
+    Digit 5:    -338390              
+    Digit 6:    -910981              
+    Digit 7:     592872 <-- PREDICTED
+    Digit 8:    -403734              
+    Digit 9:    -320570              
+
+----------------------------------------
+Testing Image 1 (Expected: 2)
+----------------------------------------
+Loaded 165 non-zero pixels
+Expected: 2 | Prediction: 2 | Confidence: 572175
+Result: ? CORRECT
+Latency: 1.033 ms
+
+----------------------------------------
+Testing Image 2 (Expected: 1)
+----------------------------------------
+Loaded 64 non-zero pixels
+Expected: 1 | Prediction: 1 | Confidence: 427267
+Result: ? CORRECT
+Latency: 1.033 ms
+
+----------------------------------------
+Testing Image 3 (Expected: 0)
+----------------------------------------
+Loaded 193 non-zero pixels
+Expected: 0 | Prediction: 0 | Confidence: 439260
+Result: ? CORRECT
+Latency: 1.033 ms
+
+----------------------------------------
+Testing Image 4 (Expected: 4)
+----------------------------------------
+Loaded 120 non-zero pixels
+Expected: 4 | Prediction: 4 | Confidence: 428951
+Result: ? CORRECT
+Latency: 1.033 ms
+
+----------------------------------------
+Testing Image 5 (Expected: 1)
+----------------------------------------
+Loaded 82 non-zero pixels
+Expected: 1 | Prediction: 1 | Confidence: 483474
+Result: ? CORRECT
+Latency: 1.033 ms
+
+----------------------------------------
+Testing Image 6 (Expected: 4)
+----------------------------------------
+Loaded 135 non-zero pixels
+Expected: 4 | Prediction: 4 | Confidence: 338954
+Result: ? CORRECT
+Latency: 1.033 ms
+
+----------------------------------------
+Testing Image 7 (Expected: 9)
+----------------------------------------
+Loaded 129 non-zero pixels
+Expected: 9 | Prediction: 9 | Confidence: 232490
+Result: ? CORRECT
+Latency: 1.033 ms
+
+----------------------------------------
+Testing Image 8 (Expected: 5)
+----------------------------------------
+Loaded 174 non-zero pixels
+Expected: 5 | Prediction: 5 | Confidence: 438666
+Result: ? CORRECT
+Latency: 1.033 ms
+
+----------------------------------------
+Testing Image 9 (Expected: 9)
+----------------------------------------
+Loaded 176 non-zero pixels
+Expected: 9 | Prediction: 9 | Confidence: 357556
+Result: ? CORRECT
+Latency: 1.033 ms
+
+
+========================================
+           TEST SUMMARY
+========================================
+Total Images Tested: 10
+Correct Predictions: 10
+Wrong Predictions:   0
+Accuracy:            100.0%
+========================================
+? PERFECT SCORE! All predictions 
