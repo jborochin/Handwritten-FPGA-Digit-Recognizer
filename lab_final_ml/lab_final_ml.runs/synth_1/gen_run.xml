@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1764640198" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/mac_unit.dcp">
-  <File Type="PA-TCL" Name="drawing_canvas_top.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="drawing_canvas_top_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="drawing_canvas_top_reports.tcl"/>
-  <File Type="RDS-RDS" Name="drawing_canvas_top.vds"/>
-  <File Type="RDS-UTIL" Name="drawing_canvas_top_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="drawing_canvas_top_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="drawing_canvas_top.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="drawing_canvas_top_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="drawing_canvas_top_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1764646313" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/mac_unit.dcp">
+  <File Type="PA-TCL" Name="digit_recognizer_top.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="digit_recognizer_top_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="digit_recognizer_top_reports.tcl"/>
+  <File Type="RDS-RDS" Name="digit_recognizer_top.vds"/>
+  <File Type="RDS-UTIL" Name="digit_recognizer_top_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="digit_recognizer_top_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="digit_recognizer_top.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="digit_recognizer_top_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="digit_recognizer_top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/src/button_debounce.sv">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/phase1_drawing/phase1_drawing/src/button_debounce.sv"/>
-        <Attr Name="ImportTime" Val="1764639784"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/digit_recognizer_nn/phase1_nn/src/button_debounce.sv"/>
+        <Attr Name="ImportTime" Val="1764642063"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/digit_display.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/digit_recognizer_nn/phase1_nn/src/digit_display.sv"/>
+        <Attr Name="ImportTime" Val="1764642063"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -22,17 +31,42 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/src/drawing_engine_cursor.sv">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/phase1_drawing/phase1_drawing/src/drawing_engine_cursor.sv"/>
-        <Attr Name="ImportTime" Val="1764639784"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/digit_recognizer_nn/phase1_nn/src/drawing_engine_cursor.sv"/>
+        <Attr Name="ImportTime" Val="1764642063"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/src/frame_buffer.sv">
+    <File Path="$PSRCDIR/sources_1/imports/src/frame_buffer_dual.sv">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/phase1_drawing/phase1_drawing/src/frame_buffer.sv"/>
-        <Attr Name="ImportTime" Val="1764639784"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/digit_recognizer_nn/phase1_nn/src/frame_buffer_dual.sv"/>
+        <Attr Name="ImportTime" Val="1764642063"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/image_downsampler.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/digit_recognizer_nn/phase1_nn/src/image_downsampler.sv"/>
+        <Attr Name="ImportTime" Val="1764642063"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/nn_inference_simple.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/digit_recognizer_nn/phase1_nn/src/nn_inference_simple.sv"/>
+        <Attr Name="ImportTime" Val="1764642063"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/vga_controller.sv">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -40,7 +74,26 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/src/vga_timing.sv">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/phase1_drawing/phase1_drawing/src/vga_timing.sv"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/digit_recognizer_nn/phase1_nn/src/vga_timing.sv"/>
+        <Attr Name="ImportTime" Val="1764642063"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/digit_recognizer_top.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/digit_recognizer_nn/phase1_nn/src/digit_recognizer_top.sv"/>
+        <Attr Name="ImportTime" Val="1764642063"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/frame_buffer.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/phase1_drawing/phase1_drawing/src/frame_buffer.sv"/>
         <Attr Name="ImportTime" Val="1764639784"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -49,6 +102,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/src/drawing_canvas_top.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/phase1_drawing/phase1_drawing/src/drawing_canvas_top.sv"/>
         <Attr Name="ImportTime" Val="1764639784"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -81,14 +135,6 @@
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/hdmi_test_project/hdmi_test/src/hdmi_test_top.sv"/>
         <Attr Name="ImportTime" Val="1764636471"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/vga_controller.sv">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -190,9 +236,33 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/weights/weights_layer1.hex">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/weights/weights_layer1.hex"/>
+        <Attr Name="ImportTime" Val="1763780525"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/weights/biases_layer0.hex">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/weights/biases_layer0.hex"/>
+        <Attr Name="ImportTime" Val="1763780525"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/weights/biases_layer1.hex">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/weights/biases_layer1.hex"/>
+        <Attr Name="ImportTime" Val="1763780525"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/weights/weights_layer0.hex">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/weights/weights_layer0.hex"/>
+        <Attr Name="ImportTime" Val="1763780525"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="drawing_canvas_top"/>
+      <Option Name="TopModule" Val="digit_recognizer_top"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

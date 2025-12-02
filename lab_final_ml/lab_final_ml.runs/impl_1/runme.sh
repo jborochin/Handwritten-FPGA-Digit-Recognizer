@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log drawing_canvas_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source drawing_canvas_top.tcl -notrace
+EAStep vivado -log digit_recognizer_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source digit_recognizer_top.tcl -notrace
 
 

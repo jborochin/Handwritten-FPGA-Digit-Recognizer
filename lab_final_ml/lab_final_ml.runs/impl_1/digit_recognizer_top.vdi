@@ -1,0 +1,781 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Mon Dec  1 21:33:29 2025
+# Process ID: 22452
+# Current directory: C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.runs/impl_1
+# Command line: vivado.exe -log digit_recognizer_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source digit_recognizer_top.tcl -notrace
+# Log file: C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.runs/impl_1/digit_recognizer_top.vdi
+# Journal file: C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.runs/impl_1\vivado.jou
+# Running On: SirJason, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 14, Host memory: 16849 MB
+#-----------------------------------------------------------
+source digit_recognizer_top.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/vorte/ECE385/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+Command: link_design -top digit_recognizer_top -part xc7s50csga324-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_gen'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0.dcp' for cell 'hdmi_transmitter'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.089 . Memory (MB): peak = 1475.922 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 14357 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'digit_recognizer_top' is not ideal for floorplanning, since the cellview 'nn_inference_simple' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_gen/inst'
+Finished Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_gen/inst'
+Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_gen/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2121.609 ; gain = 495.301
+Finished Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_gen/inst'
+Parsing XDC File [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc]
+CRITICAL WARNING: [Constraints 18-1055] Clock 'sys_clk' completely overrides clock 'clk_100mhz', which is referenced by one or more other constraints. Any constraints that refer to the overridden clock will be ignored.
+New: create_clock -period 10.000 -name sys_clk -waveform {0.000 5.000} [get_ports clk_100mhz], [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:11]
+Previous: create_clock -period 10.000 [get_ports clk_100mhz], [c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:56]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+WARNING: [Vivado 12-584] No ports matched 'SW[0]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[1]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[2]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[3]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[4]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[5]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[6]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[7]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[8]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[9]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[10]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[11]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[12]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[13]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[14]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[15]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[*]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:49]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[*]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hdmi_tx_p[0]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hdmi_tx_n[0]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hdmi_tx_p[1]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hdmi_tx_n[1]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hdmi_tx_p[2]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hdmi_tx_n[2]'. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc]
+Parsing XDC File [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/imports/xdc/drawing_canvas.xdc]
+WARNING: [Constraints 18-619] A clock with name 'sys_clk' already exists, overwriting the previous clock with the same name. [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/imports/xdc/drawing_canvas.xdc:9]
+Finished Parsing XDC File [C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/imports/xdc/drawing_canvas.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2127.562 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1265 instances were transformed.
+  RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 1224 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 39 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 2 instances
+
+14 Infos, 34 Warnings, 33 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2127.562 ; gain = 1091.645
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7s50'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.641 . Memory (MB): peak = 2127.562 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+Ending Cache Timing Information Task | Checksum: 16006d065
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.824 . Memory (MB): peak = 2130.547 ; gain = 2.984
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 2076469af
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2464.504 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 1 cells
+INFO: [Opt 31-1021] In phase Retarget, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 5 inverter(s) to 5 load pin(s).
+Phase 2 Constant propagation | Checksum: 25f665987
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2464.504 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 25 cells and removed 98 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 258846119
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2464.504 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 3 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 258846119
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2464.504 ; gain = 0.000
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 258846119
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2464.504 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 232e1e916
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2464.504 ; gain = 0.000
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               1  |                                              1  |
+|  Constant propagation         |              25  |              98  |                                              0  |
+|  Sweep                        |               3  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 2464.504 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 21a24c908
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2464.504 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 21a24c908
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 2464.504 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 21a24c908
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2464.504 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2464.504 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 21a24c908
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2464.504 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+33 Infos, 34 Warnings, 33 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2464.504 ; gain = 336.941
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.021 . Memory (MB): peak = 2464.504 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.runs/impl_1/digit_recognizer_top_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file digit_recognizer_top_drc_opted.rpt -pb digit_recognizer_top_drc_opted.pb -rpx digit_recognizer_top_drc_opted.rpx
+Command: report_drc -file digit_recognizer_top_drc_opted.rpt -pb digit_recognizer_top_drc_opted.pb -rpx digit_recognizer_top_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.runs/impl_1/digit_recognizer_top_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7s50'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2464.504 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 13616c16d
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2464.504 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2464.504 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 14ab296d0
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.734 . Memory (MB): peak = 2464.504 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+WARNING: [Place 30-770] High register utilization is forcing place_design to place up to 8 registers per slice which may impact placement success and/or routing congestion.
+Phase 1.3 Build Placer Netlist Model | Checksum: 1629749c6
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2655.625 ; gain = 191.121
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1629749c6
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2655.625 ; gain = 191.121
+Phase 1 Placer Initialization | Checksum: 1629749c6
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2655.625 ; gain = 191.121
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 1d446f067
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 2655.625 ; gain = 191.121
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 17f0efb8a
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 2655.625 ; gain = 191.121
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 17f0efb8a
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 2655.625 ; gain = 191.121
+
+Phase 2.4 Global Placement Core
+
+Phase 2.4.1 UpdateTiming Before Physical Synthesis
+Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 16907705a
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:20 . Memory (MB): peak = 2655.625 ; gain = 191.121
+
+Phase 2.4.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 337 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 154 nets or LUTs. Breaked 0 LUT, combined 154 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-1132] Very high fanout net 'canvas_fb/read_addr_a__0[5]' is not considered as a candidate in VHFN optimzation. The fanout considered for this optimization is changed from 1225 to 614 due to a timing constraint that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 614.
+INFO: [Physopt 32-1132] Very high fanout net 'canvas_fb/read_addr_a__0[4]' is not considered as a candidate in VHFN optimzation. The fanout considered for this optimization is changed from 1225 to 614 due to a timing constraint that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 614.
+INFO: [Physopt 32-1132] Very high fanout net 'canvas_fb/read_addr_a__0[3]' is not considered as a candidate in VHFN optimzation. The fanout considered for this optimization is changed from 1225 to 614 due to a timing constraint that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 614.
+INFO: [Physopt 32-1132] Very high fanout net 'canvas_fb/read_addr_b__0[5]' is not considered as a candidate in VHFN optimzation. The fanout considered for this optimization is changed from 1225 to 614 due to a timing constraint that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 614.
+INFO: [Physopt 32-1132] Very high fanout net 'canvas_fb/read_addr_b__0[4]' is not considered as a candidate in VHFN optimzation. The fanout considered for this optimization is changed from 1225 to 614 due to a timing constraint that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 614.
+INFO: [Physopt 32-1132] Very high fanout net 'canvas_fb/read_addr_b__0[3]' is not considered as a candidate in VHFN optimzation. The fanout considered for this optimization is changed from 1225 to 614 due to a timing constraint that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 614.
+INFO: [Physopt 32-1132] Very high fanout net 'downsampler/block_x_reg[3]_0[2]' is not considered as a candidate in VHFN optimzation. The fanout considered for this optimization is changed from 1225 to 614 due to a timing constraint that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 614.
+INFO: [Physopt 32-1132] Very high fanout net 'downsampler/block_x_reg[3]_0[1]' is not considered as a candidate in VHFN optimzation. The fanout considered for this optimization is changed from 1225 to 614 due to a timing constraint that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 614.
+INFO: [Physopt 32-1132] Very high fanout net 'downsampler/block_x_reg[3]_0[0]' is not considered as a candidate in VHFN optimzation. The fanout considered for this optimization is changed from 1225 to 614 due to a timing constraint that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 614.
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register to Pipeline Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2655.625 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |            154  |                   154  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |            154  |                   154  |           0  |           4  |  00:00:01  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.4.2 Physical Synthesis In Placer | Checksum: 15b011800
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:22 . Memory (MB): peak = 2655.625 ; gain = 191.121
+Phase 2.4 Global Placement Core | Checksum: 1cd31e60c
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:23 . Memory (MB): peak = 2655.625 ; gain = 191.121
+Phase 2 Global Placement | Checksum: 1cd31e60c
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:23 . Memory (MB): peak = 2655.625 ; gain = 191.121
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 27ecce0ca
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:24 . Memory (MB): peak = 2655.625 ; gain = 191.121
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 19c9fc8cd
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:33 . Memory (MB): peak = 2655.625 ; gain = 191.121
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1d080871b
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:33 . Memory (MB): peak = 2655.625 ; gain = 191.121
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 128b17bd9
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:33 . Memory (MB): peak = 2655.625 ; gain = 191.121
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 134e20508
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:41 . Memory (MB): peak = 2655.625 ; gain = 191.121
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 1468fc727
+
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:42 . Memory (MB): peak = 2655.625 ; gain = 191.121
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 1ee705ad1
+
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:43 . Memory (MB): peak = 2655.625 ; gain = 191.121
+Phase 3 Detail Placement | Checksum: 1ee705ad1
+
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:43 . Memory (MB): peak = 2655.625 ; gain = 191.121
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: fec1e919
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=6.027 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1a463b2d5
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.847 . Memory (MB): peak = 2655.625 ; gain = 0.000
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 1e106c8ef
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2655.625 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: fec1e919
+
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:49 . Memory (MB): peak = 2655.625 ; gain = 191.121
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=6.027. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 1d049398f
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:49 . Memory (MB): peak = 2655.625 ; gain = 191.121
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:49 . Memory (MB): peak = 2655.625 ; gain = 191.121
+Phase 4.1 Post Commit Optimization | Checksum: 1d049398f
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:49 . Memory (MB): peak = 2655.625 ; gain = 191.121
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1d049398f
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:50 . Memory (MB): peak = 2655.625 ; gain = 191.121
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                4x4|                4x4|
+|___________|___________________|___________________|
+|      South|                1x1|                1x1|
+|___________|___________________|___________________|
+|       East|                1x1|                1x1|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 1d049398f
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:50 . Memory (MB): peak = 2655.625 ; gain = 191.121
+Phase 4.3 Placer Reporting | Checksum: 1d049398f
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:50 . Memory (MB): peak = 2655.625 ; gain = 191.121
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2655.625 ; gain = 0.000
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:50 . Memory (MB): peak = 2655.625 ; gain = 191.121
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 18933fb1b
+
+Time (s): cpu = 00:01:07 ; elapsed = 00:00:50 . Memory (MB): peak = 2655.625 ; gain = 191.121
+Ending Placer Task | Checksum: b5e382e0
+
+Time (s): cpu = 00:01:07 ; elapsed = 00:00:50 . Memory (MB): peak = 2655.625 ; gain = 191.121
+INFO: [Common 17-83] Releasing license: Implementation
+77 Infos, 35 Warnings, 33 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:01:09 ; elapsed = 00:00:51 . Memory (MB): peak = 2655.625 ; gain = 191.121
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2655.625 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.runs/impl_1/digit_recognizer_top_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2655.625 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_io -file digit_recognizer_top_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 2655.625 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file digit_recognizer_top_utilization_placed.rpt -pb digit_recognizer_top_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file digit_recognizer_top_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 2655.625 ; gain = 0.000
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7s50'
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2658.832 ; gain = 3.207
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+86 Infos, 35 Warnings, 33 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2658.832 ; gain = 3.207
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2686.816 ; gain = 27.723
+INFO: [Common 17-1381] The checkpoint 'C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.runs/impl_1/digit_recognizer_top_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7s50'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: 3e6c3ddf ConstDB: 0 ShapeSum: 77774501 RouteDB: 0
+Post Restoration Checksum: NetGraph: f4367090 NumContArr: 987bf7bf Constraints: 0 Timing: 0
+Phase 1 Build RT Design | Checksum: 18cb2684f
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 2787.469 ; gain = 80.801
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 18cb2684f
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 2787.469 ; gain = 80.801
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 18cb2684f
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 2787.469 ; gain = 80.801
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 10a7f0de8
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:21 . Memory (MB): peak = 2844.141 ; gain = 137.473
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.249  | TNS=0.000  | WHS=-0.121 | THS=-7.570 |
+
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 16516
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 16516
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 16909d159
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:25 . Memory (MB): peak = 2945.578 ; gain = 238.910
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 16909d159
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:25 . Memory (MB): peak = 2945.578 ; gain = 238.910
+Phase 3 Initial Routing | Checksum: a8898709
+
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:41 . Memory (MB): peak = 3030.465 ; gain = 323.797
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 30647
+ Number of Nodes with overlaps = 806
+ Number of Nodes with overlaps = 198
+ Number of Nodes with overlaps = 34
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.978  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 1967a167c
+
+Time (s): cpu = 00:02:45 ; elapsed = 00:02:07 . Memory (MB): peak = 3046.605 ; gain = 339.938
+Phase 4 Rip-up And Reroute | Checksum: 1967a167c
+
+Time (s): cpu = 00:02:45 ; elapsed = 00:02:07 . Memory (MB): peak = 3046.605 ; gain = 339.938
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 1df60b48e
+
+Time (s): cpu = 00:02:48 ; elapsed = 00:02:08 . Memory (MB): peak = 3046.605 ; gain = 339.938
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=7.057  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 1df60b48e
+
+Time (s): cpu = 00:02:48 ; elapsed = 00:02:08 . Memory (MB): peak = 3046.605 ; gain = 339.938
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1df60b48e
+
+Time (s): cpu = 00:02:48 ; elapsed = 00:02:08 . Memory (MB): peak = 3046.605 ; gain = 339.938
+Phase 5 Delay and Skew Optimization | Checksum: 1df60b48e
+
+Time (s): cpu = 00:02:48 ; elapsed = 00:02:09 . Memory (MB): peak = 3046.605 ; gain = 339.938
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1f8d6af93
+
+Time (s): cpu = 00:02:51 ; elapsed = 00:02:11 . Memory (MB): peak = 3046.605 ; gain = 339.938
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=7.057  | TNS=0.000  | WHS=0.086  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 1a09bf78b
+
+Time (s): cpu = 00:02:52 ; elapsed = 00:02:11 . Memory (MB): peak = 3046.605 ; gain = 339.938
+Phase 6 Post Hold Fix | Checksum: 1a09bf78b
+
+Time (s): cpu = 00:02:52 ; elapsed = 00:02:11 . Memory (MB): peak = 3046.605 ; gain = 339.938
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 23.6392 %
+  Global Horizontal Routing Utilization  = 22.0018 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 14a467c21
+
+Time (s): cpu = 00:02:52 ; elapsed = 00:02:11 . Memory (MB): peak = 3046.605 ; gain = 339.938
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 14a467c21
+
+Time (s): cpu = 00:02:52 ; elapsed = 00:02:11 . Memory (MB): peak = 3046.605 ; gain = 339.938
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1cac1a609
+
+Time (s): cpu = 00:02:54 ; elapsed = 00:02:14 . Memory (MB): peak = 3046.605 ; gain = 339.938
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=7.057  | TNS=0.000  | WHS=0.086  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 1cac1a609
+
+Time (s): cpu = 00:02:57 ; elapsed = 00:02:16 . Memory (MB): peak = 3046.605 ; gain = 339.938
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:02:57 ; elapsed = 00:02:16 . Memory (MB): peak = 3046.605 ; gain = 339.938
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+101 Infos, 35 Warnings, 33 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:03:00 ; elapsed = 00:02:17 . Memory (MB): peak = 3046.605 ; gain = 359.789
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3046.605 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.runs/impl_1/digit_recognizer_top_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 3046.605 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_drc -file digit_recognizer_top_drc_routed.rpt -pb digit_recognizer_top_drc_routed.pb -rpx digit_recognizer_top_drc_routed.rpx
+Command: report_drc -file digit_recognizer_top_drc_routed.rpt -pb digit_recognizer_top_drc_routed.pb -rpx digit_recognizer_top_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.runs/impl_1/digit_recognizer_top_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file digit_recognizer_top_methodology_drc_routed.rpt -pb digit_recognizer_top_methodology_drc_routed.pb -rpx digit_recognizer_top_methodology_drc_routed.rpx
+Command: report_methodology -file digit_recognizer_top_methodology_drc_routed.rpt -pb digit_recognizer_top_methodology_drc_routed.pb -rpx digit_recognizer_top_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.runs/impl_1/digit_recognizer_top_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 3046.605 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_power -file digit_recognizer_top_power_routed.rpt -pb digit_recognizer_top_power_summary_routed.pb -rpx digit_recognizer_top_power_routed.rpx
+Command: report_power -file digit_recognizer_top_power_routed.rpt -pb digit_recognizer_top_power_summary_routed.pb -rpx digit_recognizer_top_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+113 Infos, 35 Warnings, 33 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 3046.605 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_route_status -file digit_recognizer_top_route_status.rpt -pb digit_recognizer_top_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file digit_recognizer_top_timing_summary_routed.rpt -pb digit_recognizer_top_timing_summary_routed.pb -rpx digit_recognizer_top_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [runtcl-4] Executing : report_incremental_reuse -file digit_recognizer_top_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file digit_recognizer_top_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file digit_recognizer_top_bus_skew_routed.rpt -pb digit_recognizer_top_bus_skew_routed.pb -rpx digit_recognizer_top_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+Command: write_bitstream -force digit_recognizer_top.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7s50'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC DPIP-1] Input pipelining: DSP downsampler/output_pixel1 input downsampler/output_pixel1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP neural_net/accumulator3 input neural_net/accumulator3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP neural_net/accumulator3 input neural_net/accumulator3/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP neural_net/p_2_out input neural_net/p_2_out/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP neural_net/p_2_out input neural_net/p_2_out/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP neural_net/p_2_out__0 input neural_net/p_2_out__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP neural_net/p_2_out__0 input neural_net/p_2_out__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP neural_net/p_2_out__1 input neural_net/p_2_out__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP neural_net/p_2_out__1 input neural_net/p_2_out__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 9 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Bitstream compression saved 5441280 bits.
+Writing bitstream ./digit_recognizer_top.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT device. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-83] Releasing license: Implementation
+12 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:20 ; elapsed = 00:00:14 . Memory (MB): peak = 3512.078 ; gain = 465.473
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  1 21:38:04 2025...

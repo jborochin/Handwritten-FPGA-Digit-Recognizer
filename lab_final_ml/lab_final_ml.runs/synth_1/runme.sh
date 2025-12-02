@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log drawing_canvas_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source drawing_canvas_top.tcl
+EAStep vivado -log digit_recognizer_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source digit_recognizer_top.tcl

@@ -1,90 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7s50csga324-1" LaunchTime="1764640198">
-  <File Type="ROUTE-PWR" Name="drawing_canvas_top_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="drawing_canvas_top.tcl"/>
-  <File Type="BITSTR-MMI" Name="drawing_canvas_top.mmi"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="drawing_canvas_top_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="drawing_canvas_top_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="drawing_canvas_top_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="drawing_canvas_top_reports.tcl"/>
-  <File Type="OPT-TIMING" Name="drawing_canvas_top_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="drawing_canvas_top_opt.dcp"/>
-  <File Type="OPT-DRC" Name="drawing_canvas_top_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="drawing_canvas_top.hwdef"/>
-  <File Type="PWROPT-DCP" Name="drawing_canvas_top_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="drawing_canvas_top_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="drawing_canvas_top_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="drawing_canvas_top_placed.dcp"/>
-  <File Type="PLACE-IO" Name="drawing_canvas_top_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="drawing_canvas_top_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="drawing_canvas_top_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="drawing_canvas_top_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="drawing_canvas_top_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="drawing_canvas_top_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="drawing_canvas_top_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BIN" Name="drawing_canvas_top.bin"/>
-  <File Type="PLACE-TIMING" Name="drawing_canvas_top_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="drawing_canvas_top_postplace_pwropt.dcp"/>
-  <File Type="BITSTR-MSK" Name="drawing_canvas_top.msk"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="drawing_canvas_top_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="drawing_canvas_top_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="drawing_canvas_top_drc_physopted.rpt"/>
-  <File Type="BITSTR-RBT" Name="drawing_canvas_top.rbt"/>
-  <File Type="PHYSOPT-TIMING" Name="drawing_canvas_top_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="drawing_canvas_top_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="drawing_canvas_top_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="drawing_canvas_top_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="drawing_canvas_top_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="drawing_canvas_top_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="drawing_canvas_top_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="drawing_canvas_top_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="drawing_canvas_top_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="drawing_canvas_top_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="drawing_canvas_top_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="drawing_canvas_top_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="drawing_canvas_top_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="drawing_canvas_top_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="drawing_canvas_top_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="drawing_canvas_top_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="drawing_canvas_top_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="drawing_canvas_top_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="drawing_canvas_top_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="drawing_canvas_top_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="drawing_canvas_top_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="drawing_canvas_top_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="drawing_canvas_top_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="drawing_canvas_top_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="drawing_canvas_top_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="drawing_canvas_top_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="drawing_canvas_top_bus_skew_postroute_physopted.rpt"/>
-  <File Type="BG-BIT" Name="drawing_canvas_top.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="drawing_canvas_top_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="drawing_canvas_top_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-NKY" Name="drawing_canvas_top.nky"/>
-  <File Type="BITSTR-BMM" Name="drawing_canvas_top_bd.bmm"/>
-  <File Type="PDI-FILE" Name="drawing_canvas_top.pdi"/>
-  <File Type="RCFI_FILE" Name="drawing_canvas_top.rcfi"/>
-  <File Type="CFI_FILE" Name="drawing_canvas_top.cfi"/>
-  <File Type="RNPI_FILE" Name="drawing_canvas_top.rnpi"/>
-  <File Type="NPI_FILE" Name="drawing_canvas_top.npi"/>
-  <File Type="RBD_FILE" Name="drawing_canvas_top.rbd"/>
+<GenRun Id="impl_1" LaunchPart="xc7s50csga324-1" LaunchTime="1764646313">
+  <File Type="ROUTE-PWR" Name="digit_recognizer_top_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="digit_recognizer_top.tcl"/>
+  <File Type="BITSTR-MMI" Name="digit_recognizer_top.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="digit_recognizer_top_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="digit_recognizer_top_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="digit_recognizer_top_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="digit_recognizer_top_reports.tcl"/>
+  <File Type="OPT-TIMING" Name="digit_recognizer_top_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="digit_recognizer_top_opt.dcp"/>
+  <File Type="OPT-DRC" Name="digit_recognizer_top_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="digit_recognizer_top.hwdef"/>
+  <File Type="PWROPT-DCP" Name="digit_recognizer_top_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="digit_recognizer_top_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="digit_recognizer_top_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="digit_recognizer_top_placed.dcp"/>
+  <File Type="PLACE-IO" Name="digit_recognizer_top_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="digit_recognizer_top_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="digit_recognizer_top_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="digit_recognizer_top_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="digit_recognizer_top_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="digit_recognizer_top_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="digit_recognizer_top_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="digit_recognizer_top.bin"/>
+  <File Type="PLACE-TIMING" Name="digit_recognizer_top_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="digit_recognizer_top_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="digit_recognizer_top.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="digit_recognizer_top_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="digit_recognizer_top_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="digit_recognizer_top_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="digit_recognizer_top.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="digit_recognizer_top_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="digit_recognizer_top_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="digit_recognizer_top_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="digit_recognizer_top_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="digit_recognizer_top_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="digit_recognizer_top_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="digit_recognizer_top_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="digit_recognizer_top_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="digit_recognizer_top_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="digit_recognizer_top_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="digit_recognizer_top_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="digit_recognizer_top_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="digit_recognizer_top_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="digit_recognizer_top_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="digit_recognizer_top_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="digit_recognizer_top_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="digit_recognizer_top_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="digit_recognizer_top_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="digit_recognizer_top_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="digit_recognizer_top_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="digit_recognizer_top_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="digit_recognizer_top_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="digit_recognizer_top_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="digit_recognizer_top_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="digit_recognizer_top_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="digit_recognizer_top_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="digit_recognizer_top_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="digit_recognizer_top.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="digit_recognizer_top_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="digit_recognizer_top_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="digit_recognizer_top.nky"/>
+  <File Type="BITSTR-BMM" Name="digit_recognizer_top_bd.bmm"/>
+  <File Type="PDI-FILE" Name="digit_recognizer_top.pdi"/>
+  <File Type="RCFI_FILE" Name="digit_recognizer_top.rcfi"/>
+  <File Type="CFI_FILE" Name="digit_recognizer_top.cfi"/>
+  <File Type="RNPI_FILE" Name="digit_recognizer_top.rnpi"/>
+  <File Type="NPI_FILE" Name="digit_recognizer_top.npi"/>
+  <File Type="RBD_FILE" Name="digit_recognizer_top.rbd"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="drawing_canvas_top.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="drawing_canvas_top.sysdef"/>
-  <File Type="BG-BGN" Name="drawing_canvas_top.bgn"/>
-  <File Type="BG-DRC" Name="drawing_canvas_top.drc"/>
-  <File Type="RDI-RDI" Name="drawing_canvas_top.vdi"/>
+  <File Type="BITSTR-LTX" Name="digit_recognizer_top.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="digit_recognizer_top.sysdef"/>
+  <File Type="BG-BGN" Name="digit_recognizer_top.bgn"/>
+  <File Type="BG-DRC" Name="digit_recognizer_top.drc"/>
+  <File Type="RDI-RDI" Name="digit_recognizer_top.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="ROUTE-RQS" Name="drawing_canvas_top_routed.rqs"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS" Name="drawing_canvas_top_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="digit_recognizer_top_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="digit_recognizer_top_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/src/button_debounce.sv">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/phase1_drawing/phase1_drawing/src/button_debounce.sv"/>
-        <Attr Name="ImportTime" Val="1764639784"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/digit_recognizer_nn/phase1_nn/src/button_debounce.sv"/>
+        <Attr Name="ImportTime" Val="1764642063"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/digit_display.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/digit_recognizer_nn/phase1_nn/src/digit_display.sv"/>
+        <Attr Name="ImportTime" Val="1764642063"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -92,17 +101,42 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/src/drawing_engine_cursor.sv">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/phase1_drawing/phase1_drawing/src/drawing_engine_cursor.sv"/>
-        <Attr Name="ImportTime" Val="1764639784"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/digit_recognizer_nn/phase1_nn/src/drawing_engine_cursor.sv"/>
+        <Attr Name="ImportTime" Val="1764642063"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/src/frame_buffer.sv">
+    <File Path="$PSRCDIR/sources_1/imports/src/frame_buffer_dual.sv">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/phase1_drawing/phase1_drawing/src/frame_buffer.sv"/>
-        <Attr Name="ImportTime" Val="1764639784"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/digit_recognizer_nn/phase1_nn/src/frame_buffer_dual.sv"/>
+        <Attr Name="ImportTime" Val="1764642063"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/image_downsampler.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/digit_recognizer_nn/phase1_nn/src/image_downsampler.sv"/>
+        <Attr Name="ImportTime" Val="1764642063"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/nn_inference_simple.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/digit_recognizer_nn/phase1_nn/src/nn_inference_simple.sv"/>
+        <Attr Name="ImportTime" Val="1764642063"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/vga_controller.sv">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -110,7 +144,26 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/src/vga_timing.sv">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/phase1_drawing/phase1_drawing/src/vga_timing.sv"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/digit_recognizer_nn/phase1_nn/src/vga_timing.sv"/>
+        <Attr Name="ImportTime" Val="1764642063"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/digit_recognizer_top.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/digit_recognizer_nn/phase1_nn/src/digit_recognizer_top.sv"/>
+        <Attr Name="ImportTime" Val="1764642063"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/frame_buffer.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/phase1_drawing/phase1_drawing/src/frame_buffer.sv"/>
         <Attr Name="ImportTime" Val="1764639784"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -119,6 +172,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/src/drawing_canvas_top.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/phase1_drawing/phase1_drawing/src/drawing_canvas_top.sv"/>
         <Attr Name="ImportTime" Val="1764639784"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -151,14 +205,6 @@
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/hdmi_test_project/hdmi_test/src/hdmi_test_top.sv"/>
         <Attr Name="ImportTime" Val="1764636471"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/vga_controller.sv">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -260,9 +306,33 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/weights/weights_layer1.hex">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/weights/weights_layer1.hex"/>
+        <Attr Name="ImportTime" Val="1763780525"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/weights/biases_layer0.hex">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/weights/biases_layer0.hex"/>
+        <Attr Name="ImportTime" Val="1763780525"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/weights/biases_layer1.hex">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/weights/biases_layer1.hex"/>
+        <Attr Name="ImportTime" Val="1763780525"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/weights/weights_layer0.hex">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/weights/weights_layer0.hex"/>
+        <Attr Name="ImportTime" Val="1763780525"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="drawing_canvas_top"/>
+      <Option Name="TopModule" Val="digit_recognizer_top"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
