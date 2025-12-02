@@ -1,0 +1,17 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.676667",
+   "Default View_TopLeft":"-30,-238",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace inst microblaze_0 -pg 1 -lvl 1 -x 280 -y 110 -defaultsOSRD
+levelinfo -pg 1 -30 280 770 1380 1690 1830
+pagesize -pg 1 -db -bbox -sgen -30 -260 1830 420
+"
+}
+{
+   "da_axi4_cnt":"1",
+   "da_board_cnt":"4",
+   "da_mb_cnt":"1"
+}

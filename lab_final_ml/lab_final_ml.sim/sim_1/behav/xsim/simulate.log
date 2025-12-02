@@ -145,4 +145,10 @@ Correct Predictions: 10
 Wrong Predictions:   0
 Accuracy:            100.0%
 ========================================
-? PERFECT SCORE! All predictions 
+? PERFECT SCORE! All predictions correct!
+
+========================================
+Test Complete!
+========================================
+$finish called at time : 10412375 ns : File "C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/sim_1/imports/sim/tb_nn_inference.sv" Line 78
+INFO: xsimkernel Simulation Memory Usage: 20208 KB (Peak: 20208 KB), Simulation CPU Usage: 11483 ms

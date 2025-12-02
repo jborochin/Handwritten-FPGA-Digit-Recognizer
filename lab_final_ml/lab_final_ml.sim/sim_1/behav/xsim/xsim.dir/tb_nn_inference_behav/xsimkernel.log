@@ -2,3 +2,6 @@ Running: xsim.dir/tb_nn_inference_behav/xsimk.exe -simmode gui -wdb tb_nn_infere
 Design successfully loaded
 Design Loading Memory Usage: 9876 KB (Peak: 9876 KB)
 Design Loading CPU Usage: 31 ms
+Simulation completed
+Simulation Memory Usage: 20208 KB (Peak: 20208 KB)
+Simulation CPU Usage: 11483 ms
