@@ -1,30 +1,30 @@
-// Digit Recognizer - Phase 1 with Neural Network
-// Drawing canvas + NN inference + result display
-// Urbana Board - Spartan-7 XC7S50-CSGA324
-//
+// Digit Recognizer with USB Mouse Support
+// Uses lab 6.2 mb_usb block design for USB functionality
+// 
 // Controls:
-//   BTN0 (J2): Reset
-//   BTN1 (J1): Clear canvas
-//   BTN2 (G2): Predict digit
-//   BTN3 (H2): Toggle draw mode
-//   SW[3:0]: Cursor speed
-//   SW[4]: Draw enable (hold)
-//   SW[5-8]: Cursor direction (L/R/U/D)
+//   Mouse left click  = Draw on canvas
+//   Mouse right click = Clear canvas
+//   Mouse middle click = Predict digit
+//   BTN0: Reset
 
 `timescale 1ns / 1ps
 
 module digit_recognizer_top (
     // Clock and Reset
     input  logic        clk_100mhz,
-    input  logic        reset_btn,
+    input  logic        reset_btn,          // Active high reset (directly to mb_usb)
     
-    // Buttons
-    input  logic        btn_clear,
-    input  logic        btn_predict,
-    input  logic        btn_draw_toggle,
+    // USB Signals (directly controlled by MicroBlaze)
+    input  logic [0:0]  gpio_usb_int_tri_i,
+    output logic        gpio_usb_rst_tri_o,
+    input  logic        usb_spi_miso,
+    output logic        usb_spi_mosi,
+    output logic        usb_spi_sclk,
+    output logic        usb_spi_ss,
     
-    // Switches
-    input  logic [15:0] sw,
+    // UART (directly to MicroBlaze)
+    input  logic        uart_rtl_0_rxd,
+    output logic        uart_rtl_0_txd,
     
     // HDMI Output
     output logic        hdmi_clk_p,
@@ -33,11 +33,55 @@ module digit_recognizer_top (
     output logic [2:0]  hdmi_data_n,
     
     // Debug LEDs
-    output logic [7:0]  led
+    output logic [7:0]  led,
+    
+    // HEX Displays (optional, for debug)
+    output logic [7:0]  hex_segA,
+    output logic [3:0]  hex_gridA,
+    output logic [7:0]  hex_segB,
+    output logic [3:0]  hex_gridB
 );
 
     // ========================================
-    // Clock Generation
+    // MicroBlaze USB System (from lab 6.2)
+    // ========================================
+    logic [31:0] keycode0_gpio, keycode1_gpio;
+    
+    mb_usb mb_block_i (
+        .clk_100MHz(clk_100mhz),
+        .gpio_usb_int_tri_i(gpio_usb_int_tri_i),
+        .gpio_usb_keycode_0_tri_o(keycode0_gpio),
+        .gpio_usb_keycode_1_tri_o(keycode1_gpio),
+        .gpio_usb_rst_tri_o(gpio_usb_rst_tri_o),
+        .reset_rtl_0(~reset_btn),  // mb_usb expects active LOW reset
+        .uart_rtl_0_rxd(uart_rtl_0_rxd),
+        .uart_rtl_0_txd(uart_rtl_0_txd),
+        .usb_spi_miso(usb_spi_miso),
+        .usb_spi_mosi(usb_spi_mosi),
+        .usb_spi_sclk(usb_spi_sclk),
+        .usb_spi_ss(usb_spi_ss)
+    );
+    
+    // ========================================
+    // Parse Mouse Data from GPIO
+    // Format from C code:
+    //   [9:0]   = X position
+    //   [19:10] = Y position
+    //   [20]    = Left button (draw)
+    //   [21]    = Right button (clear)
+    //   [22]    = Middle button (predict)
+    // ========================================
+    logic [9:0] mouse_x, mouse_y;
+    logic mouse_left, mouse_right, mouse_middle;
+    
+    assign mouse_x     = keycode0_gpio[9:0];
+    assign mouse_y     = keycode0_gpio[19:10];
+    assign mouse_left  = keycode0_gpio[20];
+    assign mouse_right = keycode0_gpio[21];
+    assign mouse_middle = keycode0_gpio[22];
+    
+    // ========================================
+    // Clock Generation (HDMI needs 25MHz and 125MHz)
     // ========================================
     logic clk_25mhz;
     logic clk_125mhz;
@@ -75,76 +119,69 @@ module digit_recognizer_top (
     // ========================================
     // Layout Parameters
     // ========================================
-    localparam CANVAS_X = 40;       // Left side for canvas
+    localparam CANVAS_X = 40;
     localparam CANVAS_Y = 100;
     localparam CANVAS_W = 280;
     localparam CANVAS_H = 280;
     localparam BORDER_W = 3;
     
-    localparam RESULT_X = 400;      // Right side for result
+    localparam RESULT_X = 400;
     localparam RESULT_Y = 150;
     
     // ========================================
-    // Button Debouncing
-    // ========================================
-    logic clear_pulse, predict_pulse, draw_toggle;
-    
-    button_debounce #(.COUNTER_WIDTH(20)) debounce_clear (
-        .clk(clk_25mhz), .reset(reset_sync),
-        .btn_in(btn_clear), .btn_out(), .btn_pulse(clear_pulse)
-    );
-    
-    button_debounce #(.COUNTER_WIDTH(20)) debounce_predict (
-        .clk(clk_25mhz), .reset(reset_sync),
-        .btn_in(btn_predict), .btn_out(), .btn_pulse(predict_pulse)
-    );
-    
-    button_debounce #(.COUNTER_WIDTH(20)) debounce_draw (
-        .clk(clk_25mhz), .reset(reset_sync),
-        .btn_in(btn_draw_toggle), .btn_out(), .btn_pulse(draw_toggle)
-    );
-    
-    // ========================================
-    // Cursor Control
+    // Cursor Position (from mouse)
     // ========================================
     logic [9:0] cursor_x, cursor_y;
-    logic draw_enable;
-    logic draw_mode_latched;
     
-    always_ff @(posedge clk_25mhz or posedge reset_sync) begin
-        if (reset_sync)
-            draw_mode_latched <= 1'b0;
-        else if (draw_toggle)
-            draw_mode_latched <= ~draw_mode_latched;
+    // Synchronize mouse position to pixel clock domain
+    logic [9:0] mouse_x_sync, mouse_y_sync;
+    logic mouse_left_sync, mouse_right_sync, mouse_middle_sync;
+    
+    // Double-flop synchronizer for clock domain crossing
+    logic [9:0] mouse_x_meta, mouse_y_meta;
+    logic mouse_left_meta, mouse_right_meta, mouse_middle_meta;
+    
+    always_ff @(posedge clk_25mhz) begin
+        // First stage
+        mouse_x_meta <= mouse_x;
+        mouse_y_meta <= mouse_y;
+        mouse_left_meta <= mouse_left;
+        mouse_right_meta <= mouse_right;
+        mouse_middle_meta <= mouse_middle;
+        // Second stage
+        mouse_x_sync <= mouse_x_meta;
+        mouse_y_sync <= mouse_y_meta;
+        mouse_left_sync <= mouse_left_meta;
+        mouse_right_sync <= mouse_right_meta;
+        mouse_middle_sync <= mouse_middle_meta;
     end
-    assign draw_enable = sw[4] || draw_mode_latched;
     
-    // Cursor movement
-    logic [19:0] move_counter;
-    logic move_tick;
-    assign move_tick = frame_start && (move_counter[3:0] <= sw[3:0]);
+    assign cursor_x = mouse_x_sync;
+    assign cursor_y = mouse_y_sync;
+    
+    // ========================================
+    // Button Edge Detection
+    // ========================================
+    logic mouse_right_prev, mouse_middle_prev;
+    logic clear_pulse, predict_pulse;
     
     always_ff @(posedge clk_25mhz or posedge reset_sync) begin
         if (reset_sync) begin
-            cursor_x <= CANVAS_X + CANVAS_W/2;
-            cursor_y <= CANVAS_Y + CANVAS_H/2;
-            move_counter <= 0;
+            mouse_right_prev <= 0;
+            mouse_middle_prev <= 0;
         end else begin
-            if (frame_start)
-                move_counter <= move_counter + 1;
-            
-            if (move_tick) begin
-                if (sw[5] && cursor_x > CANVAS_X + 2)
-                    cursor_x <= cursor_x - 2;
-                if (sw[6] && cursor_x < CANVAS_X + CANVAS_W - 3)
-                    cursor_x <= cursor_x + 2;
-                if (sw[7] && cursor_y > CANVAS_Y + 2)
-                    cursor_y <= cursor_y - 2;
-                if (sw[8] && cursor_y < CANVAS_Y + CANVAS_H - 3)
-                    cursor_y <= cursor_y + 2;
-            end
+            mouse_right_prev <= mouse_right_sync;
+            mouse_middle_prev <= mouse_middle_sync;
         end
     end
+    
+    // Rising edge detection
+    assign clear_pulse = mouse_right_sync && !mouse_right_prev;
+    assign predict_pulse = mouse_middle_sync && !mouse_middle_prev;
+    
+    // Draw enable is level-sensitive (draw while holding)
+    logic draw_enable;
+    assign draw_enable = mouse_left_sync;
     
     // ========================================
     // Frame Buffer (Dual Read Port)
@@ -174,21 +211,18 @@ module digit_recognizer_top (
     // ========================================
     // Drawing Engine
     // ========================================
-    // Disable drawing during prediction
-    logic drawing_allowed;
-    
     drawing_engine_cursor #(
         .CANVAS_X(CANVAS_X),
         .CANVAS_Y(CANVAS_Y),
         .CANVAS_W(CANVAS_W),
         .CANVAS_H(CANVAS_H),
-        .BRUSH_SIZE(8)
+        .BRUSH_SIZE(10)
     ) drawer (
         .clk(clk_25mhz),
         .reset(reset_sync),
         .cursor_x(cursor_x),
         .cursor_y(cursor_y),
-        .draw_enable(draw_enable && drawing_allowed),
+        .draw_enable(draw_enable),
         .clear_canvas(clear_pulse),
         .canvas_x(fb_write_x),
         .canvas_y(fb_write_y),
@@ -229,56 +263,48 @@ module digit_recognizer_top (
     logic ds_start, ds_done;
     logic nn_start, nn_done;
     logic [3:0] prediction;
-    logic [31:0] confidence;
+    logic [15:0] confidence;
     logic show_result;
     
     always_ff @(posedge clk_25mhz or posedge reset_sync) begin
         if (reset_sync) begin
             state <= S_IDLE;
-            show_result <= 1'b0;
+            show_result <= 0;
         end else begin
             state <= next_state;
-            
-            // Latch result when done
-            if (state == S_INFERENCE && nn_done)
-                show_result <= 1'b1;
-            
-            // Clear result when starting new prediction or clearing canvas
-            if (predict_pulse || clear_pulse)
-                show_result <= 1'b0;
+            if (state == S_DONE)
+                show_result <= 1;
+            if (clear_pulse)
+                show_result <= 0;
         end
     end
     
     always_comb begin
         next_state = state;
-        ds_start = 1'b0;
-        nn_start = 1'b0;
-        drawing_allowed = 1'b1;
+        ds_start = 0;
+        nn_start = 0;
         
         case (state)
             S_IDLE: begin
                 if (predict_pulse) begin
                     next_state = S_DOWNSAMPLE;
-                    ds_start = 1'b1;
+                    ds_start = 1;
                 end
             end
             
             S_DOWNSAMPLE: begin
-                drawing_allowed = 1'b0;
                 if (ds_done) begin
                     next_state = S_INFERENCE;
-                    nn_start = 1'b1;
+                    nn_start = 1;
                 end
             end
             
             S_INFERENCE: begin
-                drawing_allowed = 1'b0;
                 if (nn_done)
                     next_state = S_DONE;
             end
             
             S_DONE: begin
-                // Return to idle after one cycle
                 next_state = S_IDLE;
             end
         endcase
@@ -324,7 +350,7 @@ module digit_recognizer_top (
         .confidence(confidence),
         .load_input(ds_output_valid),
         .load_addr(ds_output_addr),
-        .load_data({8'b0, ds_output_pixel})  // Zero-extend to 16 bits
+        .load_data({8'b0, ds_output_pixel})
     );
     
     // ========================================
@@ -348,7 +374,7 @@ module digit_recognizer_top (
     logic [7:0] red, green, blue;
     
     logic in_canvas, in_border, in_cursor;
-    logic in_result_area, in_status_bar;
+    logic in_result_area;
     
     always_comb begin
         in_canvas = (vga_x >= CANVAS_X) && (vga_x < CANVAS_X + CANVAS_W) &&
@@ -358,15 +384,14 @@ module digit_recognizer_top (
                      (vga_y >= CANVAS_Y - BORDER_W) && (vga_y < CANVAS_Y + CANVAS_H + BORDER_W)) &&
                     !in_canvas;
         
+        // Crosshair cursor
         in_cursor = ((vga_x == cursor_x || vga_x == cursor_x-1 || vga_x == cursor_x+1) && 
-                     (vga_y >= cursor_y-4 && vga_y <= cursor_y+4)) ||
+                     (vga_y >= cursor_y-6 && vga_y <= cursor_y+6)) ||
                     ((vga_y == cursor_y || vga_y == cursor_y-1 || vga_y == cursor_y+1) && 
-                     (vga_x >= cursor_x-4 && vga_x <= cursor_x+4));
+                     (vga_x >= cursor_x-6 && vga_x <= cursor_x+6));
         
         in_result_area = (vga_x >= RESULT_X - 20) && (vga_x < RESULT_X + 120) &&
                          (vga_y >= RESULT_Y - 20) && (vga_y < RESULT_Y + 160);
-        
-        in_status_bar = (vga_y >= 420) && (vga_y < 440);
     end
     
     always_comb begin
@@ -380,12 +405,6 @@ module digit_recognizer_top (
             red = 8'h20;
             green = 8'h40;
             blue = 8'h80;
-            // Title text area
-            if (vga_y >= 15 && vga_y < 45 && vga_x >= 200 && vga_x < 440) begin
-                red = 8'hFF;
-                green = 8'hFF;
-                blue = 8'hFF;
-            end
         end
         
         // Canvas border
@@ -410,22 +429,17 @@ module digit_recognizer_top (
         
         // Result display area
         else if (in_result_area) begin
-            // Background for result
             red = 8'h20;
             green = 8'h20;
             blue = 8'h20;
             
-            // Border
+            // Border color based on state
             if (vga_x == RESULT_X - 20 || vga_x == RESULT_X + 119 ||
                 vga_y == RESULT_Y - 20 || vga_y == RESULT_Y + 159) begin
                 if (show_result) begin
-                    red = 8'h00;
-                    green = 8'hFF;
-                    blue = 8'h00;
+                    red = 8'h00; green = 8'hFF; blue = 8'h00;
                 end else begin
-                    red = 8'h80;
-                    green = 8'h80;
-                    blue = 8'h80;
+                    red = 8'h80; green = 8'h80; blue = 8'h80;
                 end
             end
             
@@ -437,28 +451,7 @@ module digit_recognizer_top (
             end
         end
         
-        // Status bar
-        else if (in_status_bar) begin
-            if (vga_x >= 40 && vga_x < 320) begin
-                case (state)
-                    S_IDLE: begin
-                        if (draw_enable) begin
-                            red = 8'h00; green = 8'hC0; blue = 8'h00;  // Green - drawing
-                        end else begin
-                            red = 8'h80; green = 8'h80; blue = 8'h00;  // Yellow - ready
-                        end
-                    end
-                    S_DOWNSAMPLE, S_INFERENCE: begin
-                        red = 8'hFF; green = 8'h80; blue = 8'h00;  // Orange - processing
-                    end
-                    S_DONE: begin
-                        red = 8'h00; green = 8'hFF; blue = 8'h00;  // Bright green - done
-                    end
-                endcase
-            end
-        end
-        
-        // Cursor overlay
+        // Cursor overlay (green when drawing, red otherwise)
         if (in_cursor && in_canvas) begin
             if (draw_enable) begin
                 red = 8'h00; green = 8'hFF; blue = 8'h00;
@@ -493,6 +486,27 @@ module digit_recognizer_top (
     );
     
     // ========================================
+    // HEX Display (Debug - shows mouse X/Y and prediction)
+    // ========================================
+    // HexA shows: Y position (hex)
+    // HexB shows: X position and prediction
+    hex_driver HexA (
+        .clk(clk_100mhz),
+        .reset(reset_btn),
+        .in('{mouse_y[3:0], mouse_y[7:4], mouse_x[3:0], mouse_x[7:4]}),
+        .hex_seg(hex_segA),
+        .hex_grid(hex_gridA)
+    );
+    
+    hex_driver HexB (
+        .clk(clk_100mhz),
+        .reset(reset_btn),
+        .in('{prediction, 4'h0, mouse_left_sync ? 4'hA : 4'h0, mouse_right_sync ? 4'hB : 4'h0}),
+        .hex_seg(hex_segB),
+        .hex_grid(hex_gridB)
+    );
+    
+    // ========================================
     // Debug LEDs
     // ========================================
     logic [23:0] heartbeat_counter;
@@ -503,11 +517,13 @@ module digit_recognizer_top (
             heartbeat_counter <= heartbeat_counter + 1;
     end
     
-    assign led[0] = heartbeat_counter[23];
-    assign led[1] = pll_locked;
-    assign led[2] = draw_enable;
+    assign led[0] = heartbeat_counter[23];  // Heartbeat
+    assign led[1] = pll_locked;             // PLL locked
+    assign led[2] = draw_enable;            // Drawing
     assign led[3] = (state != S_IDLE);      // Processing
     assign led[4] = show_result;            // Result ready
-    assign led[7:5] = prediction[2:0];      // Show prediction on LEDs
+    assign led[5] = mouse_left_sync;        // Left click
+    assign led[6] = mouse_right_sync;       // Right click
+    assign led[7] = mouse_middle_sync;      // Middle click
 
 endmodule

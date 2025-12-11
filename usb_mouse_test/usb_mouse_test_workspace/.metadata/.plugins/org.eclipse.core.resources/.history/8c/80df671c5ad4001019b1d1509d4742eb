@@ -1,0 +1,401 @@
+/*
+ * USB Mouse Test Application
+ * For Spartan-7 Urbana Board
+ * 
+ * This standalone test application demonstrates USB HID mouse functionality
+ * using the MAX3421E USB host controller.
+ * 
+ * Connect via UART at 115200 baud to see output.
+ */
+
+#include <stdio.h>
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "sleep.h"
+
+#include "max3421e.h"
+#include "usb_mouse.h"
+
+/* =============================================================================
+ * Device IDs - Adjust these based on your xparameters.h
+ * =============================================================================
+ */
+/* If your device IDs are different, update these */
+#ifndef XPAR_AXI_QUAD_SPI_0_DEVICE_ID
+#define XPAR_AXI_QUAD_SPI_0_DEVICE_ID 0
+#endif
+
+#ifndef XPAR_AXI_GPIO_0_DEVICE_ID
+#define XPAR_AXI_GPIO_0_DEVICE_ID 0
+#endif
+
+/* =============================================================================
+ * Helper Functions
+ * =============================================================================
+ */
+
+static void print_banner(void)
+{
+    xil_printf("\r\n");
+    xil_printf("============================================\r\n");
+    xil_printf("  USB Mouse Test - Urbana Board\r\n");
+    xil_printf("  MAX3421E USB Host Controller\r\n");
+    xil_printf("============================================\r\n");
+    xil_printf("\r\n");
+}
+
+static void print_mouse_state(usb_mouse_t *mouse)
+{
+    static int last_x = -1, last_y = -1;
+    static u8 last_buttons = 0xFF;
+    
+    /* Only print if something changed */
+    if (mouse->x != last_x || mouse->y != last_y || mouse->buttons != last_buttons) {
+        xil_printf("Mouse: X=%4d Y=%4d Btn=%c%c%c\r",
+                   mouse->x, mouse->y,
+                   (mouse->buttons & MOUSE_BTN_LEFT)   ? 'L' : '-',
+                   (mouse->buttons & MOUSE_BTN_MIDDLE) ? 'M' : '-',
+                   (mouse->buttons & MOUSE_BTN_RIGHT)  ? 'R' : '-');
+        
+        last_x = mouse->x;
+        last_y = mouse->y;
+        last_buttons = mouse->buttons;
+    }
+}
+
+/* Wait for device connection with timeout */
+static int wait_for_device(int timeout_seconds)
+{
+    int timeout = timeout_seconds * 10;
+    
+    xil_printf("Waiting for USB device connection...\r\n");
+    
+    while (timeout > 0) {
+        if (max3421e_device_connected()) {
+            xil_printf("Device connected!\r\n");
+            usleep(100000);  /* Debounce */
+            return XST_SUCCESS;
+        }
+        usleep(100000);
+        timeout--;
+        
+        if ((timeout % 10) == 0) {
+            xil_printf("  %d seconds remaining...\r\n", timeout / 10);
+        }
+    }
+    
+    xil_printf("Timeout waiting for device\r\n");
+    return XST_FAILURE;
+}
+
+/* =============================================================================
+ * Test Functions
+ * =============================================================================
+ */
+
+/* Basic SPI communication test */
+static int test_spi_communication(void)
+{
+    u8 revision;
+    
+    xil_printf("\r\n--- SPI Communication Test ---\r\n");
+    
+    revision = max3421e_read_reg(rREVISION);
+    xil_printf("Reading MAX3421E revision register...\r\n");
+    xil_printf("  Value: 0x%02X\r\n", revision);
+    
+    if (revision == 0x13) {
+        xil_printf("  Result: PASS (Expected 0x13)\r\n");
+        return XST_SUCCESS;
+    } else if (revision == 0x00 || revision == 0xFF) {
+        xil_printf("  Result: FAIL (No SPI communication)\r\n");
+        xil_printf("\r\n");
+        xil_printf("Troubleshooting:\r\n");
+        xil_printf("  1. Check SPI pin connections\r\n");
+        xil_printf("  2. Verify MAX3421E has power (check VBUS/3.3V)\r\n");
+        xil_printf("  3. Check SPI clock polarity/phase settings\r\n");
+        return XST_FAILURE;
+    } else {
+        xil_printf("  Result: WARNING (Unexpected value)\r\n");
+        return XST_SUCCESS;
+    }
+}
+
+/* Register read/write test */
+static int test_register_access(void)
+{
+    u8 val1, val2;
+    
+    xil_printf("\r\n--- Register Access Test ---\r\n");
+    
+    /* Test writing and reading a register */
+    xil_printf("Writing 0x55 to PINCTL register...\r\n");
+    max3421e_write_reg(rPINCTL, 0x55);
+    val1 = max3421e_read_reg(rPINCTL);
+    xil_printf("  Read back: 0x%02X\r\n", val1);
+    
+    xil_printf("Writing 0xAA to PINCTL register...\r\n");
+    max3421e_write_reg(rPINCTL, 0xAA);
+    val2 = max3421e_read_reg(rPINCTL);
+    xil_printf("  Read back: 0x%02X\r\n", val2);
+    
+    /* Restore default */
+    max3421e_write_reg(rPINCTL, bmFDUPSPI);
+    
+    /* Only check lower bits that are actually R/W */
+    if ((val1 & 0x1F) == 0x15 && (val2 & 0x1F) == 0x0A) {
+        xil_printf("  Result: PASS\r\n");
+        return XST_SUCCESS;
+    } else {
+        xil_printf("  Result: PARTIAL (Some bits may be read-only)\r\n");
+        return XST_SUCCESS;  /* Not a failure, just informational */
+    }
+}
+
+/* Power and oscillator test */
+static int test_power_and_oscillator(void)
+{
+    u8 usbirq;
+    int timeout = 100;
+    
+    xil_printf("\r\n--- Power and Oscillator Test ---\r\n");
+    
+    /* Check OSCOKIRQ */
+    xil_printf("Checking oscillator status...\r\n");
+    
+    /* Perform chip reset to trigger oscillator startup */
+    max3421e_write_reg(rUSBCTL, bmCHIPRES);
+    usleep(10000);
+    max3421e_write_reg(rUSBCTL, 0x00);
+    
+    while (timeout > 0) {
+        usbirq = max3421e_read_reg(rUSBIRQ);
+        if (usbirq & bmOSCOKIRQ) {
+            xil_printf("  Oscillator: RUNNING (OSCOKIRQ set)\r\n");
+            max3421e_write_reg(rUSBIRQ, bmOSCOKIRQ);  /* Clear flag */
+            break;
+        }
+        usleep(1000);
+        timeout--;
+    }
+    
+    if (timeout == 0) {
+        xil_printf("  Oscillator: FAILED TO START\r\n");
+        xil_printf("\r\n");
+        xil_printf("Troubleshooting:\r\n");
+        xil_printf("  1. Check crystal/oscillator circuit\r\n");
+        xil_printf("  2. Verify power supply stability\r\n");
+        return XST_FAILURE;
+    }
+    
+    xil_printf("  Result: PASS\r\n");
+    return XST_SUCCESS;
+}
+
+/* USB VBUS power test */
+static int test_vbus_power(void)
+{
+    u8 iopins;
+    
+    xil_printf("\r\n--- VBUS Power Test ---\r\n");
+    
+    /* Read IOPINS to check power state */
+    iopins = max3421e_read_reg(rIOPINS1);
+    xil_printf("  IOPINS1: 0x%02X\r\n", iopins);
+    
+    iopins = max3421e_read_reg(rIOPINS2);
+    xil_printf("  IOPINS2: 0x%02X\r\n", iopins);
+    
+    /* Check VBUS IRQ flags */
+    u8 usbirq = max3421e_read_reg(rUSBIRQ);
+    xil_printf("  USBIRQ: 0x%02X\r\n", usbirq);
+    
+    if (usbirq & bmVBUSIRQ) {
+        xil_printf("  VBUS: Present\r\n");
+    } else if (usbirq & bmNOVBUSIRQ) {
+        xil_printf("  VBUS: Not present (NOVBUSIRQ set)\r\n");
+        xil_printf("\r\n");
+        xil_printf("Troubleshooting:\r\n");
+        xil_printf("  1. Check USB port power supply\r\n");
+        xil_printf("  2. Verify VBUS enable circuit\r\n");
+        xil_printf("  3. Some boards need external VBUS enable\r\n");
+    }
+    
+    xil_printf("  Result: INFO (check VBUS status above)\r\n");
+    return XST_SUCCESS;
+}
+
+/* Bus state test */
+static int test_bus_state(void)
+{
+    u8 hrsl;
+    
+    xil_printf("\r\n--- USB Bus State Test ---\r\n");
+    
+    /* Sample the bus */
+    max3421e_write_reg(rHCTL, bmSAMPLEBUS);
+    usleep(10000);
+    
+    hrsl = max3421e_read_reg(rHRSL);
+    xil_printf("  HRSL: 0x%02X\r\n", hrsl);
+    
+    if (hrsl & bmJSTATUS) {
+        xil_printf("  Bus State: J (Full-speed device idle or connected)\r\n");
+    } else if (hrsl & bmKSTATUS) {
+        xil_printf("  Bus State: K (Low-speed device connected)\r\n");
+    } else {
+        xil_printf("  Bus State: SE0 (No device or reset state)\r\n");
+    }
+    
+    return XST_SUCCESS;
+}
+
+/* Run all diagnostic tests */
+static void run_diagnostics(void)
+{
+    xil_printf("\r\n");
+    xil_printf("========================================\r\n");
+    xil_printf("Running MAX3421E Diagnostics\r\n");
+    xil_printf("========================================\r\n");
+    
+    test_spi_communication();
+    test_register_access();
+    test_power_and_oscillator();
+    test_vbus_power();
+    test_bus_state();
+    
+    xil_printf("\r\n");
+    xil_printf("========================================\r\n");
+    xil_printf("Diagnostics Complete\r\n");
+    xil_printf("========================================\r\n");
+}
+
+/* =============================================================================
+ * Main Application
+ * =============================================================================
+ */
+
+int main()
+{
+    usb_mouse_t mouse;
+    int status;
+    int poll_count = 0;
+    
+    /* Initialize platform */
+    init_platform();
+    
+    print_banner();
+    
+    /* Initialize SPI and GPIO */
+    xil_printf("Initializing SPI and GPIO...\r\n");
+    status = max3421e_spi_init(XPAR_AXI_QUAD_SPI_0_DEVICE_ID, 
+                               XPAR_AXI_GPIO_0_DEVICE_ID);
+    if (status != XST_SUCCESS) {
+        xil_printf("FATAL: SPI/GPIO initialization failed!\r\n");
+        goto error_loop;
+    }
+    
+    /* Initialize MAX3421E chip */
+    xil_printf("Initializing MAX3421E...\r\n");
+    status = max3421e_chip_init();
+    if (status != XST_SUCCESS) {
+        xil_printf("MAX3421E initialization failed!\r\n");
+        xil_printf("Running diagnostics...\r\n");
+        run_diagnostics();
+        goto error_loop;
+    }
+    
+    /* Run diagnostics */
+    run_diagnostics();
+    
+    /* Wait for device connection */
+    if (wait_for_device(30) != XST_SUCCESS) {
+        xil_printf("No device detected. Please connect a USB mouse.\r\n");
+        goto wait_loop;
+    }
+    
+    /* Enumerate mouse */
+    status = usb_mouse_enumerate();
+    if (status != XST_SUCCESS) {
+        xil_printf("Mouse enumeration failed!\r\n");
+        max3421e_print_status();
+        goto wait_loop;
+    }
+    
+    /* Reset mouse to center */
+    usb_mouse_reset_position();
+    
+    /* Main polling loop */
+    xil_printf("\r\n");
+    xil_printf("========================================\r\n");
+    xil_printf("Mouse Active - Move mouse to test\r\n");
+    xil_printf("========================================\r\n");
+    xil_printf("\r\n");
+    
+    while (1) {
+        /* Poll mouse */
+        status = usb_mouse_poll(&mouse);
+        
+        if (status == XST_SUCCESS) {
+            print_mouse_state(&mouse);
+        }
+        
+        /* Check for device disconnect */
+        if (!max3421e_device_connected()) {
+            xil_printf("\r\nDevice disconnected!\r\n");
+            goto wait_loop;
+        }
+        
+        /* Small delay between polls (10ms = 100Hz) */
+        usleep(10000);
+        poll_count++;
+        
+        /* Periodic status */
+        if ((poll_count % 1000) == 0) {
+            xil_printf("\r\n[%d polls completed]\r\n", poll_count);
+        }
+    }
+    
+wait_loop:
+    /* Wait for new device */
+    xil_printf("\r\nWaiting for device...\r\n");
+    while (1) {
+        if (max3421e_device_connected()) {
+            xil_printf("Device detected, restarting enumeration...\r\n");
+            usleep(500000);  /* Debounce */
+            
+            status = usb_mouse_enumerate();
+            if (status == XST_SUCCESS) {
+                usb_mouse_reset_position();
+                poll_count = 0;
+                
+                xil_printf("\r\nMouse Active - Move mouse to test\r\n\r\n");
+                
+                while (1) {
+                    status = usb_mouse_poll(&mouse);
+                    if (status == XST_SUCCESS) {
+                        print_mouse_state(&mouse);
+                    }
+                    
+                    if (!max3421e_device_connected()) {
+                        xil_printf("\r\nDevice disconnected!\r\n");
+                        break;
+                    }
+                    
+                    usleep(10000);
+                }
+            }
+        }
+        usleep(100000);
+    }
+    
+error_loop:
+    xil_printf("\r\nSystem halted due to error.\r\n");
+    xil_printf("Press reset to restart.\r\n");
+    while (1) {
+        usleep(1000000);
+    }
+
+    cleanup_platform();
+    return 0;
+}

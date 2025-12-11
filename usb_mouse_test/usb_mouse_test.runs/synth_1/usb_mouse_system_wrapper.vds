@@ -1,0 +1,426 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Mon Dec  8 12:14:34 2025
+# Process ID: 33896
+# Current directory: C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1
+# Command line: vivado.exe -log usb_mouse_system_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source usb_mouse_system_wrapper.tcl
+# Log file: C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/usb_mouse_system_wrapper.vds
+# Journal file: C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1\vivado.jou
+# Running On: SirJason, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 14, Host memory: 16849 MB
+#-----------------------------------------------------------
+source usb_mouse_system_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.srcs/utils_1/imports/synth_1/mb_usb_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.srcs/utils_1/imports/synth_1/mb_usb_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top usb_mouse_system_wrapper -part xc7s50csga324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3488
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1845.426 ; gain = 408.043
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'usb_mouse_system_wrapper' [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/hdl/usb_mouse_system_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'usb_mouse_system' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:818]
+INFO: [Synth 8-6157] synthesizing module 'usb_mouse_system_axi_gpio_0_0' [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_axi_gpio_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'usb_mouse_system_axi_gpio_0_0' (0#1) [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_axi_gpio_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'usb_mouse_system_axi_interconnect_0_0' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1458]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_7HQ3MR' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_7HQ3MR' (0#1) [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:12]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1XYAZCK' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:144]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1XYAZCK' (0#1) [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:144]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_3YR0R0' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:276]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_3YR0R0' (0#1) [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:276]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1SQRUAJ' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:408]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1SQRUAJ' (0#1) [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:408]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_DR8H19' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:540]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_DR8H19' (0#1) [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:540]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_2AWUXH' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:672]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_2AWUXH' (0#1) [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:672]
+INFO: [Synth 8-6157] synthesizing module 'usb_mouse_system_xbar_0' [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_xbar_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'usb_mouse_system_xbar_0' (0#1) [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_xbar_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'usb_mouse_system_xbar_0' is unconnected for instance 'xbar' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:2251]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'usb_mouse_system_xbar_0' is unconnected for instance 'xbar' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:2251]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'usb_mouse_system_xbar_0' has 40 connections declared, but only 38 given [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:2251]
+INFO: [Synth 8-6155] done synthesizing module 'usb_mouse_system_axi_interconnect_0_0' (0#1) [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1458]
+INFO: [Synth 8-6157] synthesizing module 'usb_mouse_system_axi_quad_spi_0_0' [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_axi_quad_spi_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'usb_mouse_system_axi_quad_spi_0_0' (0#1) [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_axi_quad_spi_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'io0_t' of module 'usb_mouse_system_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1174]
+WARNING: [Synth 8-7071] port 'io1_o' of module 'usb_mouse_system_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1174]
+WARNING: [Synth 8-7071] port 'io1_t' of module 'usb_mouse_system_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1174]
+WARNING: [Synth 8-7071] port 'sck_t' of module 'usb_mouse_system_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1174]
+WARNING: [Synth 8-7071] port 'ss_t' of module 'usb_mouse_system_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1174]
+WARNING: [Synth 8-7071] port 'ip2intc_irpt' of module 'usb_mouse_system_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1174]
+WARNING: [Synth 8-7023] instance 'axi_quad_spi_0' of module 'usb_mouse_system_axi_quad_spi_0_0' has 33 connections declared, but only 27 given [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1174]
+INFO: [Synth 8-6157] synthesizing module 'usb_mouse_system_axi_timer_0_0' [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_axi_timer_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'usb_mouse_system_axi_timer_0_0' (0#1) [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_axi_timer_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'generateout0' of module 'usb_mouse_system_axi_timer_0_0' is unconnected for instance 'axi_timer_0' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1202]
+WARNING: [Synth 8-7071] port 'generateout1' of module 'usb_mouse_system_axi_timer_0_0' is unconnected for instance 'axi_timer_0' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1202]
+WARNING: [Synth 8-7071] port 'pwm0' of module 'usb_mouse_system_axi_timer_0_0' is unconnected for instance 'axi_timer_0' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1202]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'usb_mouse_system_axi_timer_0_0' is unconnected for instance 'axi_timer_0' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1202]
+WARNING: [Synth 8-7023] instance 'axi_timer_0' of module 'usb_mouse_system_axi_timer_0_0' has 26 connections declared, but only 22 given [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1202]
+INFO: [Synth 8-6157] synthesizing module 'usb_mouse_system_axi_uartlite_0_0' [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_axi_uartlite_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'usb_mouse_system_axi_uartlite_0_0' (0#1) [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_axi_uartlite_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'usb_mouse_system_axi_uartlite_0_0' is unconnected for instance 'axi_uartlite_0' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1225]
+WARNING: [Synth 8-7023] instance 'axi_uartlite_0' of module 'usb_mouse_system_axi_uartlite_0_0' has 22 connections declared, but only 21 given [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1225]
+INFO: [Synth 8-6157] synthesizing module 'usb_mouse_system_clk_wiz_0_0' [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'usb_mouse_system_clk_wiz_0_0' (0#1) [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'usb_mouse_system_dlmb_bram_if_cntlr_0' [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'usb_mouse_system_dlmb_bram_if_cntlr_0' (0#1) [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'usb_mouse_system_dlmb_v10_0' [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_dlmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'usb_mouse_system_dlmb_v10_0' (0#1) [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_dlmb_v10_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'usb_mouse_system_dlmb_v10_0' is unconnected for instance 'dlmb_v10' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1275]
+WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'usb_mouse_system_dlmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1275]
+INFO: [Synth 8-6157] synthesizing module 'usb_mouse_system_ilmb_bram_if_cntlr_0' [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'usb_mouse_system_ilmb_bram_if_cntlr_0' (0#1) [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'usb_mouse_system_ilmb_v10_0' [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_ilmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'usb_mouse_system_ilmb_v10_0' (0#1) [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_ilmb_v10_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'usb_mouse_system_ilmb_v10_0' is unconnected for instance 'ilmb_v10' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1321]
+WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'usb_mouse_system_ilmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1321]
+INFO: [Synth 8-6157] synthesizing module 'usb_mouse_system_lmb_bram_0' [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_lmb_bram_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'usb_mouse_system_lmb_bram_0' (0#1) [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_lmb_bram_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'usb_mouse_system_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1346]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'usb_mouse_system_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1346]
+WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'usb_mouse_system_lmb_bram_0' has 16 connections declared, but only 14 given [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1346]
+INFO: [Synth 8-6157] synthesizing module 'usb_mouse_system_mdm_1_0' [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_mdm_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'usb_mouse_system_mdm_1_0' (0#1) [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_mdm_1_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'Interrupt' of module 'usb_mouse_system_mdm_1_0' is unconnected for instance 'mdm_1' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1361]
+WARNING: [Synth 8-7023] instance 'mdm_1' of module 'usb_mouse_system_mdm_1_0' has 30 connections declared, but only 29 given [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1361]
+INFO: [Synth 8-6157] synthesizing module 'usb_mouse_system_microblaze_0_0' [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_microblaze_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'usb_mouse_system_microblaze_0_0' (0#1) [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_microblaze_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'Interrupt_Ack' of module 'usb_mouse_system_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1393]
+WARNING: [Synth 8-7023] instance 'microblaze_0' of module 'usb_mouse_system_microblaze_0_0' has 52 connections declared, but only 51 given [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1393]
+INFO: [Synth 8-6157] synthesizing module 'usb_mouse_system_rst_clk_wiz_100M_0' [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_rst_clk_wiz_100M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'usb_mouse_system_rst_clk_wiz_100M_0' (0#1) [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/.Xil/Vivado-33896-SirJason/realtime/usb_mouse_system_rst_clk_wiz_100M_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'usb_mouse_system_rst_clk_wiz_100M_0' is unconnected for instance 'rst_clk_wiz_100M' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1445]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'usb_mouse_system_rst_clk_wiz_100M_0' is unconnected for instance 'rst_clk_wiz_100M' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1445]
+WARNING: [Synth 8-7023] instance 'rst_clk_wiz_100M' of module 'usb_mouse_system_rst_clk_wiz_100M_0' has 10 connections declared, but only 8 given [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:1445]
+INFO: [Synth 8-6157] synthesizing module 'usb_mouse_system_xlconstant_0_0' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_xlconstant_0_0/synth/usb_mouse_system_xlconstant_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ipshared/badb/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (0#1) [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ipshared/badb/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'usb_mouse_system_xlconstant_0_0' (0#1) [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_xlconstant_0_0/synth/usb_mouse_system_xlconstant_0_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'usb_mouse_system' (0#1) [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/synth/usb_mouse_system.v:818]
+INFO: [Synth 8-6155] done synthesizing module 'usb_mouse_system_wrapper' (0#1) [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/hdl/usb_mouse_system_wrapper.v:12]
+WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_2AWUXH is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_2AWUXH is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module s00_couplers_imp_2AWUXH is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module s00_couplers_imp_2AWUXH is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m04_couplers_imp_DR8H19 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m04_couplers_imp_DR8H19 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m04_couplers_imp_DR8H19 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m04_couplers_imp_DR8H19 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m03_couplers_imp_1SQRUAJ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m03_couplers_imp_1SQRUAJ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m03_couplers_imp_1SQRUAJ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m03_couplers_imp_1SQRUAJ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m02_couplers_imp_3YR0R0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m02_couplers_imp_3YR0R0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m02_couplers_imp_3YR0R0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m02_couplers_imp_3YR0R0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m01_couplers_imp_1XYAZCK is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m01_couplers_imp_1XYAZCK is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m01_couplers_imp_1XYAZCK is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m01_couplers_imp_1XYAZCK is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m00_couplers_imp_7HQ3MR is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m00_couplers_imp_7HQ3MR is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m00_couplers_imp_7HQ3MR is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m00_couplers_imp_7HQ3MR is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ACLK in module usb_mouse_system_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module usb_mouse_system_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ACLK in module usb_mouse_system_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ARESETN in module usb_mouse_system_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ACLK in module usb_mouse_system_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ARESETN in module usb_mouse_system_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M03_ACLK in module usb_mouse_system_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M03_ARESETN in module usb_mouse_system_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M04_ACLK in module usb_mouse_system_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M04_ARESETN in module usb_mouse_system_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ACLK in module usb_mouse_system_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ARESETN in module usb_mouse_system_axi_interconnect_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1945.652 ; gain = 508.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1945.652 ; gain = 508.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1945.652 ; gain = 508.270
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1945.652 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_microblaze_0_0_2/usb_mouse_system_microblaze_0_0/usb_mouse_system_microblaze_0_0_in_context.xdc] for cell 'usb_mouse_system_i/microblaze_0'
+Finished Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_microblaze_0_0_2/usb_mouse_system_microblaze_0_0/usb_mouse_system_microblaze_0_0_in_context.xdc] for cell 'usb_mouse_system_i/microblaze_0'
+Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_dlmb_bram_if_cntlr_0_2/usb_mouse_system_dlmb_bram_if_cntlr_0/usb_mouse_system_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'usb_mouse_system_i/dlmb_bram_if_cntlr'
+Finished Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_dlmb_bram_if_cntlr_0_2/usb_mouse_system_dlmb_bram_if_cntlr_0/usb_mouse_system_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'usb_mouse_system_i/dlmb_bram_if_cntlr'
+Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_ilmb_bram_if_cntlr_0_2/usb_mouse_system_ilmb_bram_if_cntlr_0/usb_mouse_system_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'usb_mouse_system_i/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_ilmb_bram_if_cntlr_0_2/usb_mouse_system_ilmb_bram_if_cntlr_0/usb_mouse_system_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'usb_mouse_system_i/ilmb_bram_if_cntlr'
+Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_dlmb_v10_0_2/usb_mouse_system_dlmb_v10_0/mb_usb_ilmb_v10_0_in_context.xdc] for cell 'usb_mouse_system_i/dlmb_v10'
+Finished Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_dlmb_v10_0_2/usb_mouse_system_dlmb_v10_0/mb_usb_ilmb_v10_0_in_context.xdc] for cell 'usb_mouse_system_i/dlmb_v10'
+Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_ilmb_v10_0_2/usb_mouse_system_ilmb_v10_0/mb_usb_ilmb_v10_0_in_context.xdc] for cell 'usb_mouse_system_i/ilmb_v10'
+Finished Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_ilmb_v10_0_2/usb_mouse_system_ilmb_v10_0/mb_usb_ilmb_v10_0_in_context.xdc] for cell 'usb_mouse_system_i/ilmb_v10'
+Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_lmb_bram_0_2/usb_mouse_system_lmb_bram_0/usb_mouse_system_lmb_bram_0_in_context.xdc] for cell 'usb_mouse_system_i/lmb_bram'
+Finished Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_lmb_bram_0_2/usb_mouse_system_lmb_bram_0/usb_mouse_system_lmb_bram_0_in_context.xdc] for cell 'usb_mouse_system_i/lmb_bram'
+Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_clk_wiz_0_0_2/usb_mouse_system_clk_wiz_0_0/usb_mouse_system_clk_wiz_0_0_in_context.xdc] for cell 'usb_mouse_system_i/clk_wiz_0'
+Finished Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_clk_wiz_0_0_2/usb_mouse_system_clk_wiz_0_0/usb_mouse_system_clk_wiz_0_0_in_context.xdc] for cell 'usb_mouse_system_i/clk_wiz_0'
+Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_rst_clk_wiz_100M_0_2/usb_mouse_system_rst_clk_wiz_100M_0/mb_usb_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'usb_mouse_system_i/rst_clk_wiz_100M'
+Finished Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_rst_clk_wiz_100M_0_2/usb_mouse_system_rst_clk_wiz_100M_0/mb_usb_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'usb_mouse_system_i/rst_clk_wiz_100M'
+Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_xbar_0_2/usb_mouse_system_xbar_0/usb_mouse_system_xbar_0_in_context.xdc] for cell 'usb_mouse_system_i/axi_interconnect_0/xbar'
+Finished Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_xbar_0_2/usb_mouse_system_xbar_0/usb_mouse_system_xbar_0_in_context.xdc] for cell 'usb_mouse_system_i/axi_interconnect_0/xbar'
+Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_axi_quad_spi_0_0_2/usb_mouse_system_axi_quad_spi_0_0/usb_mouse_system_axi_quad_spi_0_0_in_context.xdc] for cell 'usb_mouse_system_i/axi_quad_spi_0'
+Finished Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_axi_quad_spi_0_0_2/usb_mouse_system_axi_quad_spi_0_0/usb_mouse_system_axi_quad_spi_0_0_in_context.xdc] for cell 'usb_mouse_system_i/axi_quad_spi_0'
+Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_axi_uartlite_0_0_2/usb_mouse_system_axi_uartlite_0_0/usb_mouse_system_axi_uartlite_0_0_in_context.xdc] for cell 'usb_mouse_system_i/axi_uartlite_0'
+Finished Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_axi_uartlite_0_0_2/usb_mouse_system_axi_uartlite_0_0/usb_mouse_system_axi_uartlite_0_0_in_context.xdc] for cell 'usb_mouse_system_i/axi_uartlite_0'
+Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_axi_gpio_0_0_2/usb_mouse_system_axi_gpio_0_0/mb_usb_axi_gpio_0_0_in_context.xdc] for cell 'usb_mouse_system_i/axi_gpio_0'
+Finished Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_axi_gpio_0_0_2/usb_mouse_system_axi_gpio_0_0/mb_usb_axi_gpio_0_0_in_context.xdc] for cell 'usb_mouse_system_i/axi_gpio_0'
+Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_axi_timer_0_0_2/usb_mouse_system_axi_timer_0_0/usb_mouse_system_axi_timer_0_0_in_context.xdc] for cell 'usb_mouse_system_i/axi_timer_0'
+Finished Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_axi_timer_0_0_2/usb_mouse_system_axi_timer_0_0/usb_mouse_system_axi_timer_0_0_in_context.xdc] for cell 'usb_mouse_system_i/axi_timer_0'
+Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_mdm_1_0_2/usb_mouse_system_mdm_1_0/usb_mouse_system_mdm_1_0_in_context.xdc] for cell 'usb_mouse_system_i/mdm_1'
+Finished Parsing XDC File [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_mdm_1_0_2/usb_mouse_system_mdm_1_0/usb_mouse_system_mdm_1_0_in_context.xdc] for cell 'usb_mouse_system_i/mdm_1'
+Parsing XDC File [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.srcs/constrs_1/new/constraints.xdc]
+CRITICAL WARNING: [Constraints 18-1056] Clock 'sys_clk' completely overrides clock 'sys_clock'.
+New: create_clock -period 10.000 -name sys_clk [get_ports sys_clock], [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.srcs/constrs_1/new/constraints.xdc:9]
+Previous: create_clock -period 10.000 [get_ports sys_clock], [c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_clk_wiz_0_0_2/usb_mouse_system_clk_wiz_0_0/usb_mouse_system_clk_wiz_0_0_in_context.xdc:1]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+WARNING: [Vivado 12-584] No ports matched 'reset_n'. [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.srcs/constrs_1/new/constraints.xdc:62]
+Finished Parsing XDC File [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.srcs/constrs_1/new/constraints.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.srcs/constrs_1/new/constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/usb_mouse_system_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/usb_mouse_system_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/usb_mouse_system_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1945.652 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1945.652 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'usb_mouse_system_i/axi_quad_spi_0' at clock pin 'ext_spi_clk' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'usb_mouse_system_i/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1945.652 ; gain = 508.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1945.652 ; gain = 508.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_clk_wiz_0_0_2/usb_mouse_system_clk_wiz_0_0/usb_mouse_system_clk_wiz_0_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.gen/sources_1/bd/usb_mouse_system/ip/usb_mouse_system_clk_wiz_0_0_2/usb_mouse_system_clk_wiz_0_0/usb_mouse_system_clk_wiz_0_0_in_context.xdc, line 4).
+Applied set_property KEEP_HIERARCHY = SOFT for usb_mouse_system_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usb_mouse_system_i/microblaze_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usb_mouse_system_i/dlmb_bram_if_cntlr. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usb_mouse_system_i/ilmb_bram_if_cntlr. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usb_mouse_system_i/dlmb_v10. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usb_mouse_system_i/ilmb_v10. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usb_mouse_system_i/lmb_bram. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usb_mouse_system_i/clk_wiz_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usb_mouse_system_i/rst_clk_wiz_100M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usb_mouse_system_i/axi_interconnect_0/xbar. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usb_mouse_system_i/axi_interconnect_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usb_mouse_system_i/axi_quad_spi_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usb_mouse_system_i/axi_uartlite_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usb_mouse_system_i/axi_gpio_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usb_mouse_system_i/axi_timer_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usb_mouse_system_i/mdm_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for usb_mouse_system_i/xlconstant_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1945.652 ; gain = 508.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1945.652 ; gain = 508.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port M00_ACLK in module usb_mouse_system_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module usb_mouse_system_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ACLK in module usb_mouse_system_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ARESETN in module usb_mouse_system_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ACLK in module usb_mouse_system_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ARESETN in module usb_mouse_system_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M03_ACLK in module usb_mouse_system_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M03_ARESETN in module usb_mouse_system_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M04_ACLK in module usb_mouse_system_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M04_ARESETN in module usb_mouse_system_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ACLK in module usb_mouse_system_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ARESETN in module usb_mouse_system_axi_interconnect_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1945.652 ; gain = 508.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1945.652 ; gain = 508.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1945.652 ; gain = 508.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1946.367 ; gain = 508.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1951.566 ; gain = 514.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1951.566 ; gain = 514.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1951.566 ; gain = 514.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1951.566 ; gain = 514.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1951.566 ; gain = 514.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1951.566 ; gain = 514.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------------------------------+----------+
+|      |BlackBox name                         |Instances |
++------+--------------------------------------+----------+
+|1     |usb_mouse_system_xbar_0               |         1|
+|2     |usb_mouse_system_axi_gpio_0_0         |         1|
+|3     |usb_mouse_system_axi_quad_spi_0_0     |         1|
+|4     |usb_mouse_system_axi_timer_0_0        |         1|
+|5     |usb_mouse_system_axi_uartlite_0_0     |         1|
+|6     |usb_mouse_system_clk_wiz_0_0          |         1|
+|7     |usb_mouse_system_dlmb_bram_if_cntlr_0 |         1|
+|8     |usb_mouse_system_dlmb_v10_0           |         1|
+|9     |usb_mouse_system_ilmb_bram_if_cntlr_0 |         1|
+|10    |usb_mouse_system_ilmb_v10_0           |         1|
+|11    |usb_mouse_system_lmb_bram_0           |         1|
+|12    |usb_mouse_system_mdm_1_0              |         1|
+|13    |usb_mouse_system_microblaze_0_0       |         1|
+|14    |usb_mouse_system_rst_clk_wiz_100M_0   |         1|
++------+--------------------------------------+----------+
+
+Report Cell Usage: 
++------+------------------------------------+------+
+|      |Cell                                |Count |
++------+------------------------------------+------+
+|1     |usb_mouse_system_axi_gpio_0         |     1|
+|2     |usb_mouse_system_axi_quad_spi_0     |     1|
+|3     |usb_mouse_system_axi_timer_0        |     1|
+|4     |usb_mouse_system_axi_uartlite_0     |     1|
+|5     |usb_mouse_system_clk_wiz_0          |     1|
+|6     |usb_mouse_system_dlmb_bram_if_cntlr |     1|
+|7     |usb_mouse_system_dlmb_v10           |     1|
+|8     |usb_mouse_system_ilmb_bram_if_cntlr |     1|
+|9     |usb_mouse_system_ilmb_v10           |     1|
+|10    |usb_mouse_system_lmb_bram           |     1|
+|11    |usb_mouse_system_mdm_1              |     1|
+|12    |usb_mouse_system_microblaze_0       |     1|
+|13    |usb_mouse_system_rst_clk_wiz_100M   |     1|
+|14    |usb_mouse_system_xbar               |     1|
+|15    |IBUF                                |     3|
+|16    |OBUF                                |     5|
++------+------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1951.566 ; gain = 514.184
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1951.566 ; gain = 514.184
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1951.566 ; gain = 514.184
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1963.613 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1970.191 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 81598563
+INFO: [Common 17-83] Releasing license: Synthesis
+74 Infos, 84 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1970.191 ; gain = 905.184
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test.runs/synth_1/usb_mouse_system_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file usb_mouse_system_wrapper_utilization_synth.rpt -pb usb_mouse_system_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  8 12:15:03 2025...

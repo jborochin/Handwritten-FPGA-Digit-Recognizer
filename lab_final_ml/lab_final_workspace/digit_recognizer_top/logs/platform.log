@@ -1,0 +1,1082 @@
+TRACE::2025-12-10.13:14:24::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:24::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:24::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:24::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:14:24::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:24::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:14:24::SCWPlatform::Do not have an existing db opened. 
+TRACE::2025-12-10.13:14:24::SCWPlatform::Opened new HwDB with name digit_recognizer_top_0
+TRACE::2025-12-10.13:14:24::SCWWriter::formatted JSON is {
+	"platformName":	"digit_recognizer_top",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"digit_recognizer_top",
+	"platHandOff":	"C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/digit_recognizer_top.xsa",
+	"platIntHandOff":	"<platformDir>/hw/digit_recognizer_top.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	""
+}
+TRACE::2025-12-10.13:14:24::SCWWriter::formatted JSON is {
+	"platformName":	"digit_recognizer_top",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"digit_recognizer_top",
+	"platHandOff":	"C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/digit_recognizer_top.xsa",
+	"platIntHandOff":	"<platformDir>/hw/digit_recognizer_top.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"digit_recognizer_top",
+	"systems":	[{
+			"systemName":	"digit_recognizer_top",
+			"systemDesc":	"digit_recognizer_top",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"digit_recognizer_top"
+		}]
+}
+TRACE::2025-12-10.13:14:24::SCWPlatform::Boot application domains not present, creating them
+TRACE::2025-12-10.13:14:24::SCWPlatform::Pure FPGA device, no boot application will be created.
+TRACE::2025-12-10.13:14:24::SCWWriter::formatted JSON is {
+	"platformName":	"digit_recognizer_top",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"digit_recognizer_top",
+	"platHandOff":	"C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/digit_recognizer_top.xsa",
+	"platIntHandOff":	"<platformDir>/hw/digit_recognizer_top.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"digit_recognizer_top",
+	"systems":	[{
+			"systemName":	"digit_recognizer_top",
+			"systemDesc":	"digit_recognizer_top",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"digit_recognizer_top"
+		}]
+}
+TRACE::2025-12-10.13:14:24::SCWWriter::formatted JSON is {
+	"platformName":	"digit_recognizer_top",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"digit_recognizer_top",
+	"platHandOff":	"C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/digit_recognizer_top.xsa",
+	"platIntHandOff":	"<platformDir>/hw/digit_recognizer_top.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"digit_recognizer_top",
+	"systems":	[{
+			"systemName":	"digit_recognizer_top",
+			"systemDesc":	"digit_recognizer_top",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"digit_recognizer_top"
+		}]
+}
+TRACE::2025-12-10.13:14:24::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:24::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:24::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:24::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:14:24::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:24::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:14:24::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:14:24::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:14:24::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:14:24::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:24::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:24::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:24::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:14:24::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:24::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:14:24::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:14:24::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:14:24::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:14:24::SCWDomain::checking for install qemu data   : 
+TRACE::2025-12-10.13:14:24::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:24::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:24::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:24::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:14:24::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:24::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:14:24::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:14:24::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:14:24::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:14:24::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:24::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:24::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:24::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:14:24::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:24::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:14:24::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:14:24::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:14:24::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:14:24::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:24::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:24::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:24::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:14:24::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:24::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:14:24::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:14:24::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:14:24::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:14:24::SCWMssOS::Checking the sw design at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:24::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2025-12-10.13:14:24::SCWMssOS::No sw design opened at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:24::SCWMssOS::mss does not exists at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:24::SCWMssOS::Creating sw design at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:24::SCWMssOS::Adding the swdes entry, created swdb C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss with des name C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:24::SCWMssOS::updating the scw layer changes to swdes at   C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:24::SCWMssOS::Writing mss at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:24::SCWMssOS::Completed writing the mss file at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp
+TRACE::2025-12-10.13:14:24::SCWMssOS::Picking up changes from newly written mss file into SCW Layer. 
+TRACE::2025-12-10.13:14:24::SCWMssOS::Updated the changes from newly written mss file into SCW Layer. 
+TRACE::2025-12-10.13:14:24::SCWMssOS::Completed writing the mss file at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp
+TRACE::2025-12-10.13:14:24::SCWMssOS::Forcing BSP Sources regeneration.
+TRACE::2025-12-10.13:14:28::SCWMssOS::Saving the mss changes C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:28::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss with des name system
+TRACE::2025-12-10.13:14:28::SCWMssOS::Writing the mss file completed C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:28::SCWMssOS::Commit changes completed.
+TRACE::2025-12-10.13:14:28::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:14:28::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:14:28::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:14:28::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:14:28::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:14:28::SCWMssOS::Checking the sw design at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:28::SCWMssOS::DEBUG:  swdes dump  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2025-12-10.13:14:28::SCWMssOS::Sw design exists and opened at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:28::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:14:28::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:14:28::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:14:28::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:14:28::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:14:28::SCWMssOS::Checking the sw design at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:28::SCWMssOS::DEBUG:  swdes dump  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2025-12-10.13:14:28::SCWMssOS::Sw design exists and opened at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:28::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:14:28::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:14:28::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:14:28::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:14:28::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:14:28::SCWMssOS::Checking the sw design at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:28::SCWMssOS::DEBUG:  swdes dump  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2025-12-10.13:14:28::SCWMssOS::Sw design exists and opened at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:28::SCWWriter::formatted JSON is {
+	"platformName":	"digit_recognizer_top",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"digit_recognizer_top",
+	"platHandOff":	"C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/digit_recognizer_top.xsa",
+	"platIntHandOff":	"<platformDir>/hw/digit_recognizer_top.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"digit_recognizer_top",
+	"systems":	[{
+			"systemName":	"digit_recognizer_top",
+			"systemDesc":	"digit_recognizer_top",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"digit_recognizer_top",
+			"sysActiveDom":	"standalone_microblaze_0",
+			"sysDefaultDom":	"standalone_microblaze_0",
+			"domains":	[{
+					"domainName":	"standalone_microblaze_0",
+					"domainDispName":	"standalone_microblaze_0",
+					"domainDesc":	"standalone_microblaze_0",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"304529987e879521ca977c68d163f362",
+					"compatibleApp":	"hello_world",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2025-12-10.13:14:28::SCWPlatform::Started generating the artifacts platform digit_recognizer_top
+TRACE::2025-12-10.13:14:28::SCWPlatform::Sanity checking of platform is completed
+LOG::2025-12-10.13:14:28::SCWPlatform::Started generating the artifacts for system configuration digit_recognizer_top
+LOG::2025-12-10.13:14:28::SCWSystem::Checking the domain standalone_microblaze_0
+LOG::2025-12-10.13:14:28::SCWSystem::Not a boot domain 
+LOG::2025-12-10.13:14:28::SCWSystem::Started Processing the domain standalone_microblaze_0
+TRACE::2025-12-10.13:14:28::SCWDomain::Generating domain artifcats
+TRACE::2025-12-10.13:14:28::SCWMssOS::Generating standalone artifcats
+TRACE::2025-12-10.13:14:28::SCWMssOS:: Copying the user libraries. 
+TRACE::2025-12-10.13:14:28::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:14:28::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:14:28::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:14:28::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:14:28::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:14:28::SCWMssOS::Checking the sw design at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:28::SCWMssOS::DEBUG:  swdes dump  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2025-12-10.13:14:28::SCWMssOS::Sw design exists and opened at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:28::SCWMssOS::Completed writing the mss file at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp
+TRACE::2025-12-10.13:14:28::SCWMssOS::Mss edits present, copying mssfile into export location C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:28::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2025-12-10.13:14:28::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2025-12-10.13:14:28::SCWDomain::Skipping the build for domain :  standalone_microblaze_0
+TRACE::2025-12-10.13:14:28::SCWMssOS::skipping the bsp build ... 
+TRACE::2025-12-10.13:14:28::SCWMssOS::Copying to export directory.
+TRACE::2025-12-10.13:14:28::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2025-12-10.13:14:28::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2025-12-10.13:14:28::SCWSystem::Completed Processing the domain standalone_microblaze_0
+LOG::2025-12-10.13:14:28::SCWSystem::Completed Processing the sysconfig digit_recognizer_top
+LOG::2025-12-10.13:14:28::SCWPlatform::Completed generating the artifacts for system configuration digit_recognizer_top
+TRACE::2025-12-10.13:14:28::SCWPlatform::Started preparing the platform 
+TRACE::2025-12-10.13:14:28::SCWSystem::Writing the bif file for system config digit_recognizer_top
+TRACE::2025-12-10.13:14:28::SCWSystem::dir created 
+TRACE::2025-12-10.13:14:28::SCWSystem::Writing the bif 
+TRACE::2025-12-10.13:14:28::SCWPlatform::Started writing the spfm file 
+TRACE::2025-12-10.13:14:28::SCWPlatform::Started writing the xpfm file 
+TRACE::2025-12-10.13:14:28::SCWPlatform::Completed generating the platform
+TRACE::2025-12-10.13:14:28::SCWMssOS::Saving the mss changes C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:28::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-12-10.13:14:28::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-12-10.13:14:28::SCWMssOS::Commit changes completed.
+TRACE::2025-12-10.13:14:28::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:14:28::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:14:28::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:14:28::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:14:28::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:14:28::SCWMssOS::Checking the sw design at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:28::SCWMssOS::DEBUG:  swdes dump  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2025-12-10.13:14:28::SCWMssOS::Sw design exists and opened at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:28::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:14:28::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:14:28::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:14:28::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:14:28::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:14:28::SCWMssOS::Checking the sw design at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:28::SCWMssOS::DEBUG:  swdes dump  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2025-12-10.13:14:28::SCWMssOS::Sw design exists and opened at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:28::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:14:28::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:28::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:14:28::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:14:28::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:14:28::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:14:28::SCWMssOS::Checking the sw design at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:28::SCWMssOS::DEBUG:  swdes dump  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2025-12-10.13:14:28::SCWMssOS::Sw design exists and opened at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:28::SCWWriter::formatted JSON is {
+	"platformName":	"digit_recognizer_top",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"digit_recognizer_top",
+	"platHandOff":	"C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/digit_recognizer_top.xsa",
+	"platIntHandOff":	"<platformDir>/hw/digit_recognizer_top.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"digit_recognizer_top",
+	"systems":	[{
+			"systemName":	"digit_recognizer_top",
+			"systemDesc":	"digit_recognizer_top",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"digit_recognizer_top",
+			"sysActiveDom":	"standalone_microblaze_0",
+			"sysDefaultDom":	"standalone_microblaze_0",
+			"domains":	[{
+					"domainName":	"standalone_microblaze_0",
+					"domainDispName":	"standalone_microblaze_0",
+					"domainDesc":	"standalone_microblaze_0",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"304529987e879521ca977c68d163f362",
+					"compatibleApp":	"hello_world",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2025-12-10.13:14:28::SCWPlatform::updated the xpfm file.
+TRACE::2025-12-10.13:14:29::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:14:29::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:14:29::SCWMssOS::Checking the sw design at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWMssOS::DEBUG:  swdes dump  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2025-12-10.13:14:29::SCWMssOS::Sw design exists and opened at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWMssOS::Saving the mss changes C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-12-10.13:14:29::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-12-10.13:14:29::SCWMssOS::Commit changes completed.
+TRACE::2025-12-10.13:14:29::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:14:29::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:14:29::SCWMssOS::Checking the sw design at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWMssOS::DEBUG:  swdes dump  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2025-12-10.13:14:29::SCWMssOS::Sw design exists and opened at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:14:29::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:14:29::SCWMssOS::Checking the sw design at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWMssOS::DEBUG:  swdes dump  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2025-12-10.13:14:29::SCWMssOS::Sw design exists and opened at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:14:29::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:14:29::SCWMssOS::Checking the sw design at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWMssOS::DEBUG:  swdes dump  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2025-12-10.13:14:29::SCWMssOS::Sw design exists and opened at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWWriter::formatted JSON is {
+	"platformName":	"digit_recognizer_top",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"digit_recognizer_top",
+	"platHandOff":	"C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/digit_recognizer_top.xsa",
+	"platIntHandOff":	"<platformDir>/hw/digit_recognizer_top.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"digit_recognizer_top",
+	"systems":	[{
+			"systemName":	"digit_recognizer_top",
+			"systemDesc":	"digit_recognizer_top",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"digit_recognizer_top",
+			"sysActiveDom":	"standalone_microblaze_0",
+			"sysDefaultDom":	"standalone_microblaze_0",
+			"domains":	[{
+					"domainName":	"standalone_microblaze_0",
+					"domainDispName":	"standalone_microblaze_0",
+					"domainDesc":	"standalone_microblaze_0",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"304529987e879521ca977c68d163f362",
+					"compatibleApp":	"hello_world",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2025-12-10.13:14:29::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:14:29::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:14:29::SCWMssOS::Checking the sw design at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWMssOS::DEBUG:  swdes dump  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2025-12-10.13:14:29::SCWMssOS::Sw design exists and opened at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:14:29::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:14:29::SCWMssOS::Checking the sw design at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWMssOS::DEBUG:  swdes dump  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2025-12-10.13:14:29::SCWMssOS::Sw design exists and opened at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWMssOS::Saving the mss changes C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-12-10.13:14:29::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-12-10.13:14:29::SCWMssOS::Commit changes completed.
+TRACE::2025-12-10.13:14:29::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:14:29::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:14:29::SCWMssOS::Checking the sw design at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWMssOS::DEBUG:  swdes dump  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2025-12-10.13:14:29::SCWMssOS::Sw design exists and opened at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:14:29::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:14:29::SCWMssOS::Checking the sw design at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWMssOS::DEBUG:  swdes dump  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2025-12-10.13:14:29::SCWMssOS::Sw design exists and opened at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:14:29::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:14:29::SCWMssOS::Checking the sw design at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWMssOS::DEBUG:  swdes dump  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2025-12-10.13:14:29::SCWMssOS::Sw design exists and opened at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWWriter::formatted JSON is {
+	"platformName":	"digit_recognizer_top",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"digit_recognizer_top",
+	"platHandOff":	"C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/digit_recognizer_top.xsa",
+	"platIntHandOff":	"<platformDir>/hw/digit_recognizer_top.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"digit_recognizer_top",
+	"systems":	[{
+			"systemName":	"digit_recognizer_top",
+			"systemDesc":	"digit_recognizer_top",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"digit_recognizer_top",
+			"sysActiveDom":	"standalone_microblaze_0",
+			"sysDefaultDom":	"standalone_microblaze_0",
+			"domains":	[{
+					"domainName":	"standalone_microblaze_0",
+					"domainDispName":	"standalone_microblaze_0",
+					"domainDesc":	"standalone_microblaze_0",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"304529987e879521ca977c68d163f362",
+					"compatibleApp":	"hello_world",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2025-12-10.13:14:29::SCWPlatform::Started generating the artifacts platform digit_recognizer_top
+TRACE::2025-12-10.13:14:29::SCWPlatform::Sanity checking of platform is completed
+LOG::2025-12-10.13:14:29::SCWPlatform::Started generating the artifacts for system configuration digit_recognizer_top
+LOG::2025-12-10.13:14:29::SCWSystem::Started Processing the domain standalone_microblaze_0
+TRACE::2025-12-10.13:14:29::SCWDomain::Generating domain artifcats
+TRACE::2025-12-10.13:14:29::SCWMssOS::Generating standalone artifcats
+TRACE::2025-12-10.13:14:29::SCWMssOS:: Copying the user libraries. 
+TRACE::2025-12-10.13:14:29::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:14:29::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:14:29::SCWMssOS::Checking the sw design at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWMssOS::DEBUG:  swdes dump  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2025-12-10.13:14:29::SCWMssOS::Sw design exists and opened at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWMssOS::Completed writing the mss file at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp
+TRACE::2025-12-10.13:14:29::SCWMssOS::Mss edits present, copying mssfile into export location C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2025-12-10.13:14:29::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2025-12-10.13:14:29::SCWDomain::Building the domain as part of full build :  standalone_microblaze_0
+TRACE::2025-12-10.13:14:29::SCWMssOS::skipping the bsp build ... 
+TRACE::2025-12-10.13:14:29::SCWMssOS::Copying to export directory.
+TRACE::2025-12-10.13:14:29::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2025-12-10.13:14:29::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2025-12-10.13:14:29::SCWSystem::Completed Processing the domain standalone_microblaze_0
+LOG::2025-12-10.13:14:29::SCWSystem::Completed Processing the sysconfig digit_recognizer_top
+LOG::2025-12-10.13:14:29::SCWPlatform::Completed generating the artifacts for system configuration digit_recognizer_top
+TRACE::2025-12-10.13:14:29::SCWPlatform::Started preparing the platform 
+TRACE::2025-12-10.13:14:29::SCWSystem::Writing the bif file for system config digit_recognizer_top
+TRACE::2025-12-10.13:14:29::SCWSystem::dir created 
+TRACE::2025-12-10.13:14:29::SCWSystem::Writing the bif 
+TRACE::2025-12-10.13:14:29::SCWPlatform::Started writing the spfm file 
+TRACE::2025-12-10.13:14:29::SCWPlatform::Started writing the xpfm file 
+TRACE::2025-12-10.13:14:29::SCWPlatform::Completed generating the platform
+TRACE::2025-12-10.13:14:29::SCWMssOS::Saving the mss changes C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-12-10.13:14:29::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-12-10.13:14:29::SCWMssOS::Commit changes completed.
+TRACE::2025-12-10.13:14:29::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:14:29::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:14:29::SCWMssOS::Checking the sw design at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWMssOS::DEBUG:  swdes dump  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2025-12-10.13:14:29::SCWMssOS::Sw design exists and opened at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:14:29::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:14:29::SCWMssOS::Checking the sw design at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWMssOS::DEBUG:  swdes dump  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2025-12-10.13:14:29::SCWMssOS::Sw design exists and opened at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:14:29::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:14:29::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:14:29::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:14:29::SCWMssOS::Checking the sw design at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWMssOS::DEBUG:  swdes dump  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2025-12-10.13:14:29::SCWMssOS::Sw design exists and opened at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:14:29::SCWWriter::formatted JSON is {
+	"platformName":	"digit_recognizer_top",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"digit_recognizer_top",
+	"platHandOff":	"C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/digit_recognizer_top.xsa",
+	"platIntHandOff":	"<platformDir>/hw/digit_recognizer_top.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"digit_recognizer_top",
+	"systems":	[{
+			"systemName":	"digit_recognizer_top",
+			"systemDesc":	"digit_recognizer_top",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"digit_recognizer_top",
+			"sysActiveDom":	"standalone_microblaze_0",
+			"sysDefaultDom":	"standalone_microblaze_0",
+			"domains":	[{
+					"domainName":	"standalone_microblaze_0",
+					"domainDispName":	"standalone_microblaze_0",
+					"domainDesc":	"standalone_microblaze_0",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"304529987e879521ca977c68d163f362",
+					"compatibleApp":	"hello_world",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2025-12-10.13:14:29::SCWPlatform::updated the xpfm file.
+TRACE::2025-12-10.13:15:50::SCWMssOS::cleaning the bsp 
+TRACE::2025-12-10.13:15:50::SCWMssOS::System Command Ran  C: & cd  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp & make clean 
+TRACE::2025-12-10.13:15:50::SCWMssOS::make -C microblaze_0/libsrc/bram_v4_8/src -s clean 
+
+TRACE::2025-12-10.13:15:50::SCWMssOS::make -C microblaze_0/libsrc/cpu_v2_16/src -s clean 
+
+TRACE::2025-12-10.13:15:50::SCWMssOS::make -C microblaze_0/libsrc/gpio_v4_9/src -s clean 
+
+TRACE::2025-12-10.13:15:50::SCWMssOS::make -C microblaze_0/libsrc/intc_v3_15/src -s clean 
+
+TRACE::2025-12-10.13:15:50::SCWMssOS::make -C microblaze_0/libsrc/spi_v4_9/src -s clean 
+
+TRACE::2025-12-10.13:15:50::SCWMssOS::make -C microblaze_0/libsrc/standalone_v8_0/src -s clean 
+
+TRACE::2025-12-10.13:15:50::SCWMssOS::make -C microblaze_0/libsrc/tmrctr_v4_9/src -s clean 
+
+TRACE::2025-12-10.13:15:50::SCWMssOS::make -C microblaze_0/libsrc/uartlite_v3_7/src -s clean 
+
+TRACE::2025-12-10.13:15:51::SCWMssOS::rm -f microblaze_0/lib/libxil.a
+
+LOG::2025-12-10.13:15:54::SCWPlatform::Started generating the artifacts platform digit_recognizer_top
+TRACE::2025-12-10.13:15:54::SCWPlatform::Sanity checking of platform is completed
+LOG::2025-12-10.13:15:54::SCWPlatform::Started generating the artifacts for system configuration digit_recognizer_top
+LOG::2025-12-10.13:15:54::SCWSystem::Checking the domain standalone_microblaze_0
+LOG::2025-12-10.13:15:54::SCWSystem::Not a boot domain 
+LOG::2025-12-10.13:15:54::SCWSystem::Started Processing the domain standalone_microblaze_0
+TRACE::2025-12-10.13:15:54::SCWDomain::Generating domain artifcats
+TRACE::2025-12-10.13:15:54::SCWMssOS::Generating standalone artifcats
+TRACE::2025-12-10.13:15:54::SCWMssOS:: Copying the user libraries. 
+TRACE::2025-12-10.13:15:54::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:15:54::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:15:54::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:15:54::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:15:54::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:15:54::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:15:54::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:15:54::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:15:54::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:15:54::SCWMssOS::Checking the sw design at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:15:54::SCWMssOS::DEBUG:  swdes dump  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2025-12-10.13:15:54::SCWMssOS::Sw design exists and opened at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:15:54::SCWMssOS::Completed writing the mss file at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp
+TRACE::2025-12-10.13:15:54::SCWMssOS::Mss edits present, copying mssfile into export location C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:15:54::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2025-12-10.13:15:54::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2025-12-10.13:15:54::SCWDomain::Building the domain as part of full build :  standalone_microblaze_0
+TRACE::2025-12-10.13:15:54::SCWMssOS::doing bsp build ... 
+TRACE::2025-12-10.13:15:54::SCWMssOS::System Command Ran  C: & cd  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp & make 
+TRACE::2025-12-10.13:15:54::SCWMssOS::make --no-print-directory seq_libs
+
+TRACE::2025-12-10.13:15:54::SCWMssOS::'Finished building libraries sequentially.'
+
+TRACE::2025-12-10.13:15:54::SCWMssOS::make -j 18 --no-print-directory par_libs
+
+TRACE::2025-12-10.13:15:55::SCWMssOS::"Running Make include in microblaze_0/libsrc/bram_v4_8/src"
+
+TRACE::2025-12-10.13:15:55::SCWMssOS::make -C microblaze_0/libsrc/bram_v4_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+TRACE::2025-12-10.13:15:55::SCWMssOS::R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_CO
+TRACE::2025-12-10.13:15:55::SCWMssOS::MPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2025-12-10.13:15:55::SCWMssOS::"Running Make include in microblaze_0/libsrc/cpu_v2_16/src"
+
+TRACE::2025-12-10.13:15:55::SCWMssOS::make -C microblaze_0/libsrc/cpu_v2_16/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+TRACE::2025-12-10.13:15:55::SCWMssOS::R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_CO
+TRACE::2025-12-10.13:15:55::SCWMssOS::MPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2025-12-10.13:15:55::SCWMssOS::"Running Make include in microblaze_0/libsrc/gpio_v4_9/src"
+
+TRACE::2025-12-10.13:15:55::SCWMssOS::make -C microblaze_0/libsrc/gpio_v4_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+TRACE::2025-12-10.13:15:55::SCWMssOS::R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_CO
+TRACE::2025-12-10.13:15:55::SCWMssOS::MPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2025-12-10.13:15:55::SCWMssOS::"Running Make include in microblaze_0/libsrc/intc_v3_15/src"
+
+TRACE::2025-12-10.13:15:55::SCWMssOS::make -C microblaze_0/libsrc/intc_v3_15/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+TRACE::2025-12-10.13:15:55::SCWMssOS::ER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_C
+TRACE::2025-12-10.13:15:55::SCWMssOS::OMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2025-12-10.13:15:55::SCWMssOS::"Running Make include in microblaze_0/libsrc/spi_v4_9/src"
+
+TRACE::2025-12-10.13:15:55::SCWMssOS::make -C microblaze_0/libsrc/spi_v4_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER
+TRACE::2025-12-10.13:15:55::SCWMssOS::_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COM
+TRACE::2025-12-10.13:15:55::SCWMssOS::PILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2025-12-10.13:15:55::SCWMssOS::"Running Make include in microblaze_0/libsrc/standalone_v8_0/src"
+
+TRACE::2025-12-10.13:15:55::SCWMssOS::make -C microblaze_0/libsrc/standalone_v8_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "C
+TRACE::2025-12-10.13:15:55::SCWMssOS::OMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EX
+TRACE::2025-12-10.13:15:55::SCWMssOS::TRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2025-12-10.13:15:55::SCWMssOS::"Running Make include in microblaze_0/libsrc/tmrctr_v4_9/src"
+
+TRACE::2025-12-10.13:15:55::SCWMssOS::make -C microblaze_0/libsrc/tmrctr_v4_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPI
+TRACE::2025-12-10.13:15:55::SCWMssOS::LER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_
+TRACE::2025-12-10.13:15:55::SCWMssOS::COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2025-12-10.13:15:55::SCWMssOS::"Running Make include in microblaze_0/libsrc/uartlite_v3_7/src"
+
+TRACE::2025-12-10.13:15:55::SCWMssOS::make -C microblaze_0/libsrc/uartlite_v3_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COM
+TRACE::2025-12-10.13:15:55::SCWMssOS::PILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTR
+TRACE::2025-12-10.13:15:55::SCWMssOS::A_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2025-12-10.13:15:55::SCWMssOS::"Running Make libs in microblaze_0/libsrc/bram_v4_8/src"
+
+TRACE::2025-12-10.13:15:55::SCWMssOS::make -C microblaze_0/libsrc/bram_v4_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_F
+TRACE::2025-12-10.13:15:55::SCWMssOS::LAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMPI
+TRACE::2025-12-10.13:15:55::SCWMssOS::LER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2025-12-10.13:15:55::SCWMssOS::"Running Make libs in microblaze_0/libsrc/cpu_v2_16/src"
+
+TRACE::2025-12-10.13:15:55::SCWMssOS::make -C microblaze_0/libsrc/cpu_v2_16/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_F
+TRACE::2025-12-10.13:15:55::SCWMssOS::LAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMPI
+TRACE::2025-12-10.13:15:55::SCWMssOS::LER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2025-12-10.13:15:55::SCWMssOS::"Running Make libs in microblaze_0/libsrc/gpio_v4_9/src"
+
+TRACE::2025-12-10.13:15:55::SCWMssOS::make -C microblaze_0/libsrc/gpio_v4_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_F
+TRACE::2025-12-10.13:15:55::SCWMssOS::LAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMPI
+TRACE::2025-12-10.13:15:55::SCWMssOS::LER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2025-12-10.13:15:55::SCWMssOS::"Running Make libs in microblaze_0/libsrc/intc_v3_15/src"
+
+TRACE::2025-12-10.13:15:55::SCWMssOS::make -C microblaze_0/libsrc/intc_v3_15/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_
+TRACE::2025-12-10.13:15:55::SCWMssOS::FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMP
+TRACE::2025-12-10.13:15:55::SCWMssOS::ILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2025-12-10.13:15:55::SCWMssOS::"Running Make libs in microblaze_0/libsrc/spi_v4_9/src"
+
+TRACE::2025-12-10.13:15:55::SCWMssOS::make -C microblaze_0/libsrc/spi_v4_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_FL
+TRACE::2025-12-10.13:15:55::SCWMssOS::AGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMPIL
+TRACE::2025-12-10.13:15:55::SCWMssOS::ER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2025-12-10.13:15:55::SCWMssOS::"Running Make libs in microblaze_0/libsrc/standalone_v8_0/src"
+
+TRACE::2025-12-10.13:15:56::SCWMssOS::make -C microblaze_0/libsrc/standalone_v8_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMP
+TRACE::2025-12-10.13:15:56::SCWMssOS::ILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA
+TRACE::2025-12-10.13:15:56::SCWMssOS::_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2025-12-10.13:15:56::SCWMssOS::"Running Make libs in microblaze_0/libsrc/tmrctr_v4_9/src"
+
+TRACE::2025-12-10.13:15:56::SCWMssOS::make -C microblaze_0/libsrc/tmrctr_v4_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER
+TRACE::2025-12-10.13:15:56::SCWMssOS::_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COM
+TRACE::2025-12-10.13:15:56::SCWMssOS::PILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2025-12-10.13:15:56::SCWMssOS::"Running Make libs in microblaze_0/libsrc/uartlite_v3_7/src"
+
+TRACE::2025-12-10.13:15:56::SCWMssOS::make -C microblaze_0/libsrc/uartlite_v3_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+TRACE::2025-12-10.13:15:56::SCWMssOS::ER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_C
+TRACE::2025-12-10.13:15:56::SCWMssOS::OMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2025-12-10.13:15:57::SCWMssOS::"DEBUG NON_LTO_OBJECTS is ../../../lib/microblaze_interrupt_handler.o"
+
+TRACE::2025-12-10.13:15:57::SCWMssOS::'Finished building libraries parallelly.'
+
+TRACE::2025-12-10.13:15:57::SCWMssOS::make --no-print-directory archive
+
+TRACE::2025-12-10.13:15:57::SCWMssOS::mb-ar -r  microblaze_0/lib/libxil.a microblaze_0/lib/_exit.o microblaze_0/lib/errno.o microblaze_0/lib/fcntl.o microblaze_0/lib
+TRACE::2025-12-10.13:15:57::SCWMssOS::/hw_exception_handler.o microblaze_0/lib/inbyte.o microblaze_0/lib/microblaze_disable_dcache.o microblaze_0/lib/microblaze_disa
+TRACE::2025-12-10.13:15:57::SCWMssOS::ble_exceptions.o microblaze_0/lib/microblaze_disable_icache.o microblaze_0/lib/microblaze_disable_interrupts.o microblaze_0/lib
+TRACE::2025-12-10.13:15:57::SCWMssOS::/microblaze_enable_dcache.o microblaze_0/lib/microblaze_enable_exceptions.o microblaze_0/lib/microblaze_enable_icache.o microbl
+TRACE::2025-12-10.13:15:57::SCWMssOS::aze_0/lib/microblaze_enable_interrupts.o microblaze_0/lib/microblaze_exception_handler.o microblaze_0/lib/microblaze_flush_cach
+TRACE::2025-12-10.13:15:57::SCWMssOS::e_ext.o microblaze_0/lib/microblaze_flush_cache_ext_range.o microblaze_0/lib/microblaze_flush_dcache.o microblaze_0/lib/microbl
+TRACE::2025-12-10.13:15:57::SCWMssOS::aze_flush_dcache_range.o microblaze_0/lib/microblaze_init_dcache_range.o microblaze_0/lib/microblaze_init_icache_range.o microb
+TRACE::2025-12-10.13:15:57::SCWMssOS::laze_0/lib/microblaze_interrupt_handler.o microblaze_0/lib/microblaze_interrupts_g.o microblaze_0/lib/microblaze_invalidate_cac
+TRACE::2025-12-10.13:15:57::SCWMssOS::he_ext.o microblaze_0/lib/microblaze_invalidate_cache_ext_range.o microblaze_0/lib/microblaze_invalidate_dcache.o microblaze_0/
+TRACE::2025-12-10.13:15:57::SCWMssOS::lib/microblaze_invalidate_dcache_range.o microblaze_0/lib/microblaze_invalidate_icache.o microblaze_0/lib/microblaze_invalidate
+TRACE::2025-12-10.13:15:57::SCWMssOS::_icache_range.o microblaze_0/lib/microblaze_scrub.o microblaze_0/lib/microblaze_selftest.o microblaze_0/lib/microblaze_sleep.o 
+TRACE::2025-12-10.13:15:57::SCWMssOS::microblaze_0/lib/microblaze_update_dcache.o microblaze_0/lib/microblaze_update_icache.o microblaze_0/lib/outbyte.o microblaze_0
+TRACE::2025-12-10.13:15:57::SCWMssOS::/lib/print.o microblaze_0/lib/pvr.o microblaze_0/lib/xbram.o microblaze_0/lib/xbram_g.o microblaze_0/lib/xbram_intr.o microblaz
+TRACE::2025-12-10.13:15:57::SCWMssOS::e_0/lib/xbram_selftest.o microblaze_0/lib/xbram_sinit.o microblaze_0/lib/xgpio.o microblaze_0/lib/xgpio_extra.o microblaze_0/li
+TRACE::2025-12-10.13:15:57::SCWMssOS::b/xgpio_g.o microblaze_0/lib/xgpio_intr.o microblaze_0/lib/xgpio_selftest.o microblaze_0/lib/xgpio_sinit.o microblaze_0/lib/xil
+TRACE::2025-12-10.13:15:57::SCWMssOS::_assert.o microblaze_0/lib/xil_cache.o microblaze_0/lib/xil_clocking.o microblaze_0/lib/xil_exception.o microblaze_0/lib/xil_me
+TRACE::2025-12-10.13:15:57::SCWMssOS::m.o microblaze_0/lib/xil_misc_psreset_api.o microblaze_0/lib/xil_printf.o microblaze_0/lib/xil_sleepcommon.o microblaze_0/lib/x
+TRACE::2025-12-10.13:15:57::SCWMssOS::il_testcache.o microblaze_0/lib/xil_testio.o microblaze_0/lib/xil_testmem.o microblaze_0/lib/xil_util.o microblaze_0/lib/xintc.
+TRACE::2025-12-10.13:15:57::SCWMssOS::o microblaze_0/lib/xintc_g.o microblaze_0/lib/xintc_intr.o microblaze_0/lib/xintc_l.o microblaze_0/lib/xintc_options.o microbla
+TRACE::2025-12-10.13:15:57::SCWMssOS::ze_0/lib/xintc_selftest.o microblaze_0/lib/xinterrupt_wrap.o microblaze_0/lib/xio.o microblaze_0/lib/xplatform_info.o microblaz
+TRACE::2025-12-10.13:15:57::SCWMssOS::e_0/lib/xspi.o microblaze_0/lib/xspi_g.o microblaze_0/lib/xspi_options.o microblaze_0/lib/xspi_selftest.o microblaze_0/lib/xspi
+TRACE::2025-12-10.13:15:57::SCWMssOS::_sinit.o microblaze_0/lib/xspi_stats.o microblaze_0/lib/xtmrctr.o microblaze_0/lib/xtmrctr_g.o microblaze_0/lib/xtmrctr_intr.o 
+TRACE::2025-12-10.13:15:57::SCWMssOS::microblaze_0/lib/xtmrctr_l.o microblaze_0/lib/xtmrctr_options.o microblaze_0/lib/xtmrctr_selftest.o microblaze_0/lib/xtmrctr_si
+TRACE::2025-12-10.13:15:57::SCWMssOS::nit.o microblaze_0/lib/xtmrctr_stats.o microblaze_0/lib/xuartlite.o microblaze_0/lib/xuartlite_g.o microblaze_0/lib/xuartlite_i
+TRACE::2025-12-10.13:15:57::SCWMssOS::ntr.o microblaze_0/lib/xuartlite_l.o microblaze_0/lib/xuartlite_selftest.o microblaze_0/lib/xuartlite_sinit.o microblaze_0/lib/
+TRACE::2025-12-10.13:15:57::SCWMssOS::xuartlite_stats.o
+
+TRACE::2025-12-10.13:15:57::SCWMssOS::'Finished building libraries'
+
+TRACE::2025-12-10.13:15:57::SCWMssOS::Copying to export directory.
+TRACE::2025-12-10.13:15:57::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2025-12-10.13:15:57::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2025-12-10.13:15:57::SCWSystem::Completed Processing the domain standalone_microblaze_0
+LOG::2025-12-10.13:15:57::SCWSystem::Completed Processing the sysconfig digit_recognizer_top
+LOG::2025-12-10.13:15:57::SCWPlatform::Completed generating the artifacts for system configuration digit_recognizer_top
+TRACE::2025-12-10.13:15:57::SCWPlatform::Started preparing the platform 
+TRACE::2025-12-10.13:15:57::SCWSystem::Writing the bif file for system config digit_recognizer_top
+TRACE::2025-12-10.13:15:57::SCWSystem::dir created 
+TRACE::2025-12-10.13:15:57::SCWSystem::Writing the bif 
+TRACE::2025-12-10.13:15:57::SCWPlatform::Started writing the spfm file 
+TRACE::2025-12-10.13:15:57::SCWPlatform::Started writing the xpfm file 
+TRACE::2025-12-10.13:15:57::SCWPlatform::Completed generating the platform
+TRACE::2025-12-10.13:15:57::SCWMssOS::Saving the mss changes C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:15:57::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-12-10.13:15:57::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-12-10.13:15:57::SCWMssOS::Commit changes completed.
+TRACE::2025-12-10.13:15:57::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:15:57::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:15:57::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:15:57::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:15:57::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:15:57::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:15:57::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:15:57::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:15:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:15:57::SCWMssOS::Checking the sw design at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:15:58::SCWMssOS::DEBUG:  swdes dump  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2025-12-10.13:15:58::SCWMssOS::Sw design exists and opened at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:15:58::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:15:58::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:15:58::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:15:58::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:15:58::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:15:58::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:15:58::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:15:58::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:15:58::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:15:58::SCWMssOS::Checking the sw design at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:15:58::SCWMssOS::DEBUG:  swdes dump  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2025-12-10.13:15:58::SCWMssOS::Sw design exists and opened at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:15:58::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:15:58::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:15:58::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:15:58::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:15:58::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:15:58::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:15:58::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:15:58::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:15:58::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:15:58::SCWMssOS::Checking the sw design at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:15:58::SCWMssOS::DEBUG:  swdes dump  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2025-12-10.13:15:58::SCWMssOS::Sw design exists and opened at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:15:58::SCWWriter::formatted JSON is {
+	"platformName":	"digit_recognizer_top",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"digit_recognizer_top",
+	"platHandOff":	"C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/digit_recognizer_top.xsa",
+	"platIntHandOff":	"<platformDir>/hw/digit_recognizer_top.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"digit_recognizer_top",
+	"systems":	[{
+			"systemName":	"digit_recognizer_top",
+			"systemDesc":	"digit_recognizer_top",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"digit_recognizer_top",
+			"sysActiveDom":	"standalone_microblaze_0",
+			"sysDefaultDom":	"standalone_microblaze_0",
+			"domains":	[{
+					"domainName":	"standalone_microblaze_0",
+					"domainDispName":	"standalone_microblaze_0",
+					"domainDesc":	"standalone_microblaze_0",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"304529987e879521ca977c68d163f362",
+					"compatibleApp":	"hello_world",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2025-12-10.13:15:58::SCWPlatform::updated the xpfm file.
+TRACE::2025-12-10.13:15:58::SCWPlatform::Trying to open the hw design at C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:15:58::SCWPlatform::DSA given C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:15:58::SCWPlatform::DSA absoulate path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:15:58::SCWPlatform::DSA directory C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw
+TRACE::2025-12-10.13:15:58::SCWPlatform:: Platform Path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/hw/digit_recognizer_top.xsa
+TRACE::2025-12-10.13:15:58::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2025-12-10.13:15:58::SCWPlatform::Trying to set the existing hwdb with name digit_recognizer_top_0
+TRACE::2025-12-10.13:15:58::SCWPlatform::Opened existing hwdb digit_recognizer_top_0
+TRACE::2025-12-10.13:15:58::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-10.13:15:58::SCWMssOS::Checking the sw design at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2025-12-10.13:15:58::SCWMssOS::DEBUG:  swdes dump  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2025-12-10.13:15:58::SCWMssOS::Sw design exists and opened at  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_workspace/digit_recognizer_top/microblaze_0/standalone_microblaze_0/bsp/system.mss

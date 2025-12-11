@@ -1,0 +1,45 @@
+19:43:57 **** Incremental Build of configuration Debug for project mouse_test_app ****
+make all 
+'Building file: ../src/lw_usb/HID.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lw_usb/HID.o" -IC:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test_workspace/mouse_test_plat/export/mouse_test_plat/sw/mouse_test_plat/standalone_domain/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lw_usb/HID.d" -MT"src/lw_usb/HID.o" -o "src/lw_usb/HID.o" "../src/lw_usb/HID.c"
+../src/lw_usb/HID.c:77:1: warning: braces around scalar initializer
+   77 | HID_DEVICE hid_device = { { 0 } };
+      | ^~~~~~~~~~
+../src/lw_usb/HID.c:77:1: note: (near initialization for 'hid_device.addr')
+'Finished building: ../src/lw_usb/HID.c'
+' '
+'Building file: ../src/lw_usb/MAX3421E.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lw_usb/MAX3421E.o" -IC:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test_workspace/mouse_test_plat/export/mouse_test_plat/sw/mouse_test_plat/standalone_domain/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lw_usb/MAX3421E.d" -MT"src/lw_usb/MAX3421E.o" -o "src/lw_usb/MAX3421E.o" "../src/lw_usb/MAX3421E.c"
+'Finished building: ../src/lw_usb/MAX3421E.c'
+' '
+'Building file: ../src/lw_usb/USB.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lw_usb/USB.o" -IC:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test_workspace/mouse_test_plat/export/mouse_test_plat/sw/mouse_test_plat/standalone_domain/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lw_usb/USB.d" -MT"src/lw_usb/USB.o" -o "src/lw_usb/USB.o" "../src/lw_usb/USB.c"
+'Finished building: ../src/lw_usb/USB.c'
+' '
+'Building file: ../src/lw_usb/transfer.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lw_usb/transfer.o" -IC:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test_workspace/mouse_test_plat/export/mouse_test_plat/sw/mouse_test_plat/standalone_domain/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lw_usb/transfer.d" -MT"src/lw_usb/transfer.o" -o "src/lw_usb/transfer.o" "../src/lw_usb/transfer.c"
+'Finished building: ../src/lw_usb/transfer.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -IC:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test_workspace/mouse_test_plat/export/mouse_test_plat/sw/mouse_test_plat/standalone_domain/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: mouse_test_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test_workspace/mouse_test_plat/export/mouse_test_plat/sw/mouse_test_plat/standalone_domain/bsplib/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mouse_test_app.elf"  ./src/lw_usb/HID.o ./src/lw_usb/MAX3421E.o ./src/lw_usb/USB.o ./src/lw_usb/transfer.o  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mouse_test_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size mouse_test_app.elf  |tee "mouse_test_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  18660	    392	   3292	  22344	   5748	mouse_test_app.elf
+'Finished building: mouse_test_app.elf.size'
+' '
+
+19:44:00 Build Finished (took 2s.108ms)
+

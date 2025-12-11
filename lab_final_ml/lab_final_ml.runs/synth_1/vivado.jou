@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Mon Dec  1 21:31:55 2025
-# Process ID: 23824
+# Start of session at: Wed Dec 10 13:04:14 2025
+# Process ID: 34144
 # Current directory: C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.runs/synth_1
 # Command line: vivado.exe -log digit_recognizer_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source digit_recognizer_top.tcl
 # Log file: C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.runs/synth_1/digit_recognizer_top.vds

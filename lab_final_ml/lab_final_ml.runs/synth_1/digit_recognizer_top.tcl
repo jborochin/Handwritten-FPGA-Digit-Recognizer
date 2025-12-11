@@ -70,8 +70,11 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 5
-set_param xicom.use_bs_reader 1
+set_param synth.incrementalSynthesisCache C:/Users/vorte/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-30384-SirJason/incrSyn
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1
 
@@ -81,7 +84,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.cache/wt [current_project]
 set_property parent.project_path C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.xpr [current_project]
-set_property XPM_LIBRARIES XPM_CDC [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_repo_paths c:/Users/vorte/ECE385/ip_repo [current_project]
@@ -91,22 +94,64 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
-  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/sources_1/imports/src/button_debounce.sv
   C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/sources_1/imports/src/digit_display.sv
   C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/sources_1/imports/src/drawing_engine_cursor.sv
   C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/sources_1/imports/src/frame_buffer_dual.sv
+  C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/sources_1/imports/design_source/hex_driver.sv
   C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/sources_1/imports/src/image_downsampler.sv
   C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/sources_1/imports/src/nn_inference_simple.sv
   C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/sources_1/new/vga_controller.sv
   C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/sources_1/imports/src/vga_timing.sv
   C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/sources_1/imports/src/digit_recognizer_top.sv
 }
+add_files C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/sources_1/bd/mb_usb/mb_usb.bd
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_uartlite_0_0/mb_usb_axi_uartlite_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_uartlite_0_0/mb_usb_axi_uartlite_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_uartlite_0_0/mb_usb_axi_uartlite_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_clk_wiz_1_0/mb_usb_clk_wiz_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_clk_wiz_1_0/mb_usb_clk_wiz_1_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_clk_wiz_1_0/mb_usb_clk_wiz_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_gpio_usb_int_0/mb_usb_gpio_usb_int_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_gpio_usb_int_0/mb_usb_gpio_usb_int_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_gpio_usb_int_0/mb_usb_gpio_usb_int_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_gpio_usb_keycode_0/mb_usb_gpio_usb_keycode_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_gpio_usb_keycode_0/mb_usb_gpio_usb_keycode_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_gpio_usb_keycode_0/mb_usb_gpio_usb_keycode_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_gpio_usb_rst_0/mb_usb_gpio_usb_rst_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_gpio_usb_rst_0/mb_usb_gpio_usb_rst_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_gpio_usb_rst_0/mb_usb_gpio_usb_rst_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_mdm_1_0/mb_usb_mdm_1_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_mdm_1_0/mb_usb_mdm_1_0_ooc_trace.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_0/mb_usb_microblaze_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_0/mb_usb_microblaze_0_0_ooc_debug.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_0/mb_usb_microblaze_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_axi_intc_0/mb_usb_microblaze_0_axi_intc_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_axi_intc_0/mb_usb_microblaze_0_axi_intc_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_axi_intc_0/mb_usb_microblaze_0_axi_intc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_xbar_0/mb_usb_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_dlmb_v10_0/mb_usb_dlmb_v10_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_ilmb_v10_0/mb_usb_ilmb_v10_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_dlmb_bram_if_cntlr_0/mb_usb_dlmb_bram_if_cntlr_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_ilmb_bram_if_cntlr_0/mb_usb_ilmb_bram_if_cntlr_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_lmb_bram_0/mb_usb_lmb_bram_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_rst_clk_wiz_1_100M_0/mb_usb_rst_clk_wiz_1_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_rst_clk_wiz_1_100M_0/mb_usb_rst_clk_wiz_1_100M_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_rst_clk_wiz_1_100M_0/mb_usb_rst_clk_wiz_1_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_spi_usb_0/mb_usb_spi_usb_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_spi_usb_0/mb_usb_spi_usb_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_spi_usb_0/mb_usb_spi_usb_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_spi_usb_0/mb_usb_spi_usb_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_timer_usb_axi_0/mb_usb_timer_usb_axi_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_timer_usb_axi_0/mb_usb_timer_usb_axi_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/mb_usb_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_0/data/mb_bootloop_le.elf]
+
 read_ip -quiet C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
 
-read_ip -quiet c:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci
+read_ip -quiet C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -120,9 +165,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc
 set_property used_in_implementation false [get_files C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/new/digit_recognizer.xdc]
 
-read_xdc C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/imports/xdc/drawing_canvas.xdc
-set_property used_in_implementation false [get_files C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/constrs_1/imports/xdc/drawing_canvas.xdc]
-
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
 read_checkpoint -auto_incremental -incremental C:/Users/vorte/ECE385/fpga_final_project/lab_final_ml/lab_final_ml.srcs/utils_1/imports/synth_1/mac_unit.dcp

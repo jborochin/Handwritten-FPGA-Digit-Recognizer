@@ -1,0 +1,253 @@
+// USB Mouse Driver for Digit Recognition Project
+// Outputs mouse data via GPIO to FPGA logic
+//
+// GPIO Data Format (matches digit_recognizer_top.sv):
+//   [9:0]   = X position (0-639)
+//   [19:10] = Y position (0-479)
+//   [20]    = Draw enable (left button)
+//   [21]    = Clear canvas (right button)
+//   [22]    = Predict (middle button)
+
+#include <stdio.h>
+#include "platform.h"
+#include "lw_usb/GenericMacros.h"
+#include "lw_usb/GenericTypeDefs.h"
+#include "lw_usb/MAX3421E.h"
+#include "lw_usb/USB.h"
+#include "lw_usb/usb_ch9.h"
+#include "lw_usb/transfer.h"
+#include "lw_usb/HID.h"
+
+#include "xparameters.h"
+#include <xgpio.h>
+
+extern HID_DEVICE hid_device;
+
+static XGpio Gpio_mouse;
+
+static BYTE addr = 1;
+const char* const devclasses[] = { " Uninitialized", " HID Keyboard", " HID Mouse", " Mass storage" };
+
+// ============================================
+// Canvas/Screen Parameters
+// ============================================
+// Match these to your digit_recognizer_top.sv parameters
+#define SCREEN_WIDTH   640
+#define SCREEN_HEIGHT  480
+
+// Canvas boundaries (from digit_recognizer_top.sv)
+#define CANVAS_X       40
+#define CANVAS_Y       100
+#define CANVAS_W       280
+#define CANVAS_H       280
+
+// Mouse position - absolute coordinates
+static int mouse_x = CANVAS_X + CANVAS_W / 2;  // Start at canvas center
+static int mouse_y = CANVAS_Y + CANVAS_H / 2;
+
+// Mouse sensitivity (pixels per displacement unit)
+#define MOUSE_SENSITIVITY 2
+
+// ============================================
+// USB Initialization
+// ============================================
+BYTE GetDriverandReport() {
+    BYTE i;
+    BYTE rcode;
+    BYTE device = 0xFF;
+    BYTE tmpbyte;
+
+    DEV_RECORD* tpl_ptr;
+    xil_printf("Reached USB_STATE_RUNNING (0x40)\n");
+    for (i = 1; i < USB_NUMDEVICES; i++) {
+        tpl_ptr = GetDevtable(i);
+        if (tpl_ptr->epinfo != NULL) {
+            xil_printf("Device: %d", i);
+            xil_printf("%s \n", devclasses[tpl_ptr->devclass]);
+            device = tpl_ptr->devclass;
+        }
+    }
+
+    rcode = XferGetIdle(addr, 0, hid_device.interface, 0, &tmpbyte);
+    if (rcode) {
+        xil_printf("GetIdle Error. Error code: ");
+        xil_printf("%x \n", rcode);
+    } else {
+        xil_printf("Update rate: ");
+        xil_printf("%x \n", tmpbyte);
+    }
+
+    xil_printf("Protocol: ");
+    rcode = XferGetProto(addr, 0, hid_device.interface, &tmpbyte);
+    if (rcode) {
+        xil_printf("GetProto Error. Error code ");
+        xil_printf("%x \n", rcode);
+    } else {
+        xil_printf("%d \n", tmpbyte);
+    }
+    return device;
+}
+
+// ============================================
+// Mouse Position Update
+// ============================================
+void updateMousePosition(signed char dx, signed char dy) {
+    // Apply sensitivity scaling
+    mouse_x += dx * MOUSE_SENSITIVITY;
+    mouse_y += dy * MOUSE_SENSITIVITY;
+
+    // Clamp to screen bounds
+    if (mouse_x < 0) mouse_x = 0;
+    if (mouse_x >= SCREEN_WIDTH) mouse_x = SCREEN_WIDTH - 1;
+    if (mouse_y < 0) mouse_y = 0;
+    if (mouse_y >= SCREEN_HEIGHT) mouse_y = SCREEN_HEIGHT - 1;
+}
+
+// ============================================
+// GPIO Output
+// ============================================
+// Pack mouse data in format expected by digit_recognizer_top.sv:
+//   [9:0]   = X position (10 bits)
+//   [19:10] = Y position (10 bits)
+//   [20]    = Left button (draw)
+//   [21]    = Right button (clear)
+//   [22]    = Middle button (predict)
+void outputMouseData(BYTE buttons) {
+    u32 packed_data = 0;
+
+    // Extract button states
+    BYTE left_btn   = (buttons & 0x01) ? 1 : 0;  // Bit 0 = left
+    BYTE right_btn  = (buttons & 0x02) ? 1 : 0;  // Bit 1 = right
+    BYTE middle_btn = (buttons & 0x04) ? 1 : 0;  // Bit 2 = middle
+
+    // Pack data: X[9:0], Y[19:10], draw[20], clear[21], predict[22]
+    packed_data = (mouse_x & 0x3FF)              |  // bits [9:0]
+                  ((mouse_y & 0x3FF) << 10)      |  // bits [19:10]
+                  (left_btn << 20)               |  // bit [20] - draw
+                  (right_btn << 21)              |  // bit [21] - clear
+                  (middle_btn << 22);               // bit [22] - predict
+
+    XGpio_DiscreteWrite(&Gpio_mouse, 1, packed_data);
+}
+
+// ============================================
+// Main Program
+// ============================================
+int main() {
+    init_platform();
+
+    // Initialize GPIO for mouse data output
+    // Note: Use the correct device ID from xparameters.h
+    // This might be XPAR_AXI_GPIO_0_DEVICE_ID or similar
+    int status = XGpio_Initialize(&Gpio_mouse, XPAR_GPIO_0_DEVICE_ID);
+    if (status != XST_SUCCESS) {
+        xil_printf("GPIO initialization failed!\n");
+        return -1;
+    }
+    XGpio_SetDataDirection(&Gpio_mouse, 1, 0x00000000);  // All outputs
+
+    BYTE rcode;
+    BOOT_MOUSE_REPORT buf;
+    BOOT_KBD_REPORT kbdbuf;
+
+    BYTE runningdebugflag = 0;
+    BYTE errorflag = 0;
+    BYTE device;
+
+    xil_printf("\n\n================================\n");
+    xil_printf("Digit Recognition Mouse Driver\n");
+    xil_printf("================================\n");
+    xil_printf("Canvas: (%d,%d) to (%d,%d)\n",
+               CANVAS_X, CANVAS_Y, CANVAS_X+CANVAS_W, CANVAS_Y+CANVAS_H);
+    xil_printf("Controls:\n");
+    xil_printf("  Left click  = Draw\n");
+    xil_printf("  Right click = Clear canvas\n");
+    xil_printf("  Middle click = Predict digit\n");
+    xil_printf("================================\n\n");
+
+    xil_printf("Initializing MAX3421E...\n");
+    MAX3421E_init();
+    xil_printf("Initializing USB...\n");
+    USB_init();
+
+    // Initialize cursor at canvas center
+    mouse_x = CANVAS_X + CANVAS_W / 2;
+    mouse_y = CANVAS_Y + CANVAS_H / 2;
+    outputMouseData(0);
+
+    xil_printf("Mouse initialized at (%d, %d)\n", mouse_x, mouse_y);
+    xil_printf("Waiting for USB device...\n");
+
+    while (1) {
+        MAX3421E_Task();
+        USB_Task();
+
+        if (GetUsbTaskState() == USB_STATE_RUNNING) {
+            if (!runningdebugflag) {
+                runningdebugflag = 1;
+                device = GetDriverandReport();
+                xil_printf("\nDevice ready! Start drawing.\n\n");
+            }
+            else if (device == 1) {
+                // Keyboard (not used for digit recognition, but keep for compatibility)
+                rcode = kbdPoll(&kbdbuf);
+                if (rcode == hrNAK) {
+                    continue;
+                } else if (rcode) {
+                    continue;
+                }
+                // Could add keyboard shortcuts here if needed
+            }
+            else if (device == 2) {
+                // Mouse - main input for digit recognition
+                rcode = mousePoll(&buf);
+                if (rcode == hrNAK) {
+                    continue;  // No new data
+                } else if (rcode) {
+                    xil_printf("Mouse poll error: %x\n", rcode);
+                    continue;
+                }
+
+                // Update position from relative displacement
+                signed char dx = (signed char) buf.Xdispl;
+                signed char dy = (signed char) buf.Ydispl;
+
+                if (dx != 0 || dy != 0) {
+                    updateMousePosition(dx, dy);
+                }
+
+                // Output to FPGA
+                outputMouseData(buf.button);
+
+                // Debug output (comment out for better performance)
+                // Only print when something changes
+                static BYTE last_buttons = 0;
+                if (buf.button != last_buttons) {
+                    if (buf.button & 0x01) xil_printf("Drawing...\n");
+                    if (buf.button & 0x02) xil_printf("Clear canvas!\n");
+                    if (buf.button & 0x04) xil_printf("Predict digit!\n");
+                    last_buttons = buf.button;
+                }
+            }
+        }
+        else if (GetUsbTaskState() == USB_STATE_ERROR) {
+            if (!errorflag) {
+                errorflag = 1;
+                xil_printf("USB Error State\n");
+            }
+        }
+        else {
+            // Not running
+            if (runningdebugflag) {
+                runningdebugflag = 0;
+                xil_printf("USB disconnected, reinitializing...\n");
+                MAX3421E_init();
+                USB_init();
+            }
+            errorflag = 0;
+        }
+    }
+
+    cleanup_platform();
+    return 0;
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="mouse_test_app" location="C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test_workspace/mouse_test_app" platform="C:/Users/vorte/ECE385/fpga_final_project/usb_mouse_test/usb_mouse_test_workspace/mouse_test_plat/export/mouse_test_plat/mouse_test_plat.xpfm" platformUID="xilinx:::0.0(custom)" systemProject="mouse_test_app_system" sysConfig="mouse_test_plat" runtime="C/C++" cpu="standalone_domain" cpuInstance="microblaze_0" os="standalone" mssSignature="3bebd6e2d4d570eded35589c4aecd120">
+  <configuration name="Debug" id="xilinx.gnu.mb.exe.debug.1440064452">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.mb.exe.release.2018187647" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

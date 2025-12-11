@@ -1,0 +1,65 @@
+#include "xil_printf.h"
+#include "sleep.h"
+#include "max3421e.h"
+#include "usb_mouse.h"
+#include "xparameters.h"
+
+int main()
+{
+    usb_mouse_t mouse;
+    int status;
+
+    xil_printf("\r\n=== USB Mouse Test ===\r\n");
+
+    // Initialize SPI and GPIO
+    max3421e_spi_init(XPAR_AXI_QUAD_SPI_0_DEVICE_ID, XPAR_AXI_GPIO_0_DEVICE_ID);
+
+    // Initialize MAX3421E
+    max3421e_chip_init();
+
+    // Enable VBUS GPOUTs (just in case)
+    max3421e_write_reg(rIOPINS1, 0x0F);
+    max3421e_write_reg(rIOPINS2, 0x0F);
+    usleep(100000);
+
+    // Check for device
+    xil_printf("\r\nChecking for device...\r\n");
+    if (!max3421e_device_connected()) {
+        xil_printf("No device detected. Please connect mouse.\r\n");
+        while (!max3421e_device_connected()) {
+            usleep(100000);
+        }
+        xil_printf("Device detected!\r\n");
+        usleep(500000); // Debounce
+    }
+
+    // Enumerate
+    xil_printf("\r\nEnumerating USB device...\r\n");
+    status = usb_mouse_enumerate();
+
+    if (status != 0) {
+        xil_printf("Enumeration failed!\r\n");
+        max3421e_print_status();
+        while(1);
+    }
+
+    xil_printf("\r\n*** Mouse Ready! Move mouse to test ***\r\n\r\n");
+    usb_mouse_reset_position();
+
+    // Poll loop
+    while(1) {
+        status = usb_mouse_poll(&mouse);
+
+        if (status == 0) {
+            xil_printf("X=%4d Y=%4d Btn=%c%c%c\r",
+                       mouse.x, mouse.y,
+                       (mouse.buttons & 0x01) ? 'L' : '-',
+                       (mouse.buttons & 0x04) ? 'M' : '-',
+                       (mouse.buttons & 0x02) ? 'R' : '-');
+        }
+
+        usleep(10000); // 10ms = 100Hz polling
+    }
+
+    return 0;
+}

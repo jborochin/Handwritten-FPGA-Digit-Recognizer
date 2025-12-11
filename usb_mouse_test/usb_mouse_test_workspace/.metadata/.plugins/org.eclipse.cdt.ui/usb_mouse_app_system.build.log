@@ -1,0 +1,6 @@
+12:34:56 **** Incremental Build of configuration Debug for project usb_mouse_app_system ****
+make all 
+Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
+
+12:34:56 Build Finished (took 94ms)
+

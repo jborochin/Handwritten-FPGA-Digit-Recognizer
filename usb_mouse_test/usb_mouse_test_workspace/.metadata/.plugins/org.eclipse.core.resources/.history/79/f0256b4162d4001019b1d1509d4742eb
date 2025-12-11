@@ -1,0 +1,105 @@
+#include "xil_printf.h"
+#include "sleep.h"
+#include "xgpio.h"
+#include "xspi.h"
+#include "xparameters.h"
+#include "max3421e_regs.h"
+
+#define GPIO_DEVICE_ID   XPAR_AXI_GPIO_0_DEVICE_ID
+#define SPI_DEVICE_ID    XPAR_AXI_QUAD_SPI_0_DEVICE_ID
+
+#define GPIO_RST_CHANNEL 2   // Channel 2 is reset output
+#define GPIO_INT_CHANNEL 1   // Channel 1 is interrupt input
+
+static XGpio Gpio;
+static XSpi Spi;
+
+// Simple SPI read
+u8 simple_spi_read(u8 reg) {
+    u8 tx[2] = {reg, 0x00};  // Read command: reg address with bit 0 = 0
+    u8 rx[2] = {0, 0};
+
+    XSpi_Transfer(&Spi, tx, rx, 2);
+    return rx[1];
+}
+
+int main()
+{
+    int status;
+    u8 rev;
+
+    xil_printf("\r\n=== GPIO Reset Debug ===\r\n");
+
+    // Initialize GPIO
+    xil_printf("Initializing GPIO...\r\n");
+    status = XGpio_Initialize(&Gpio, GPIO_DEVICE_ID);
+    if (status != XST_SUCCESS) {
+        xil_printf("GPIO init failed!\r\n");
+        while(1);
+    }
+
+    // Set directions: Channel 1 = input (INT), Channel 2 = output (RST)
+    XGpio_SetDataDirection(&Gpio, GPIO_INT_CHANNEL, 0xFFFFFFFF);  // Input
+    XGpio_SetDataDirection(&Gpio, GPIO_RST_CHANNEL, 0x00000000);  // Output
+
+    // Initialize SPI
+    xil_printf("Initializing SPI...\r\n");
+    XSpi_Config *spiConfig = XSpi_LookupConfig(SPI_DEVICE_ID);
+    status = XSpi_CfgInitialize(&Spi, spiConfig, spiConfig->BaseAddress);
+    if (status != XST_SUCCESS) {
+        xil_printf("SPI init failed!\r\n");
+        while(1);
+    }
+
+    // Configure SPI: Master, Manual SS, CPOL=0, CPHA=0
+    XSpi_SetOptions(&Spi, XSP_MASTER_OPTION | XSP_MANUAL_SSELECT_OPTION);
+    XSpi_SetSlaveSelect(&Spi, 0x01);
+    XSpi_Start(&Spi);
+    XSpi_IntrGlobalDisable(&Spi);
+
+    // === Test Reset Control ===
+    xil_printf("\r\n--- Testing Reset Pin ---\r\n");
+
+    // First, read current GPIO state
+    u32 gpio_val = XGpio_DiscreteRead(&Gpio, GPIO_RST_CHANNEL);
+    xil_printf("Current GPIO Ch2 (RST): 0x%08X\r\n", gpio_val);
+
+    // Drive reset LOW (assert reset)
+    xil_printf("\r\nDriving USB_RST LOW (assert reset)...\r\n");
+    XGpio_DiscreteWrite(&Gpio, GPIO_RST_CHANNEL, 0x00);
+    usleep(50000);
+
+    rev = simple_spi_read(0x90);  // rREVISION with read bit
+    xil_printf("  Revision while in reset: 0x%02X (expect 0xFF)\r\n", rev);
+
+    // Drive reset HIGH (release reset)
+    xil_printf("\r\nDriving USB_RST HIGH (release reset)...\r\n");
+    XGpio_DiscreteWrite(&Gpio, GPIO_RST_CHANNEL, 0x01);
+    usleep(100000);  // Wait for chip to start
+
+    rev = simple_spi_read(0x90);
+    xil_printf("  Revision after reset release: 0x%02X (expect 0x13)\r\n", rev);
+
+    // Try multiple reads
+    xil_printf("\r\nMultiple reads:\r\n");
+    for (int i = 0; i < 5; i++) {
+        rev = simple_spi_read(0x90);
+        xil_printf("  Read %d: 0x%02X\r\n", i+1, rev);
+        usleep(50000);
+    }
+
+    if (rev == 0x13) {
+        xil_printf("\r\n*** SUCCESS! SPI communication working ***\r\n");
+    } else {
+        xil_printf("\r\n*** FAILED - Still no communication ***\r\n");
+        xil_printf("\r\nCheck:\r\n");
+        xil_printf("  1. Is USB_RST pin (V13) connected correctly?\r\n");
+        xil_printf("  2. Are SPI pins correct? (MISO=U12, MOSI=V15, CLK=V14, SS=T12)\r\n");
+    }
+
+    while(1) {
+        usleep(1000000);
+    }
+
+    return 0;
+}
